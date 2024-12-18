@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Matemasie&family=Nerko+One&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.award-section-outer {
+    width: 100%;
+    height: 500px;
+    background-color: #F7F4EB;
+    margin-bottom: 150px;
+
+    .award-heading {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        padding: 10px 10px;
+
+        p {
+            color: #3b8744;
+            font-size: 45px;
+            font-weight: bold;
+        }
+    }
+
+    .award-section {
+        width: 500px;
+        height: 250px;
+        background-color: white;
+        overflow: hidden;
+        border-radius: 15px;
+        box-shadow: 1px 17px 9px 1px rgba(199, 199, 199, 0.69);
+        -webkit-box-shadow: 1px 17px 9px 1px rgba(199, 199, 199, 0.69);
+        -moz-box-shadow: 1px 17px 9px 1px rgba(199, 199, 199, 0.69);
+        margin-left: 45px;
+
+        .award-section-pic {
+            width: 100%;
+            height: 200px;
+
+            img {
+                object-fit: contain;
+                object-position: center;
+            }
+
+
+        }
+
+        p {
+            color: #3b8744;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+    }
+}

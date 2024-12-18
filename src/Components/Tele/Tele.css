@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Matemasie&family=Nerko+One&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.parallax-effec {
+    width: 100%;
+    min-height: 1000px;
+    background-image: url("../../media/tele.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 150px;
+}
+
+.right-for-me {
+    width: 50%;
+    height: auto;
+    /* background-color: aliceblue; */
+    background-color: #FFCBA6;
+    position: absolute;
+    left: 40%;
+    top: 25%;
+    padding: 10px;
+}
+
+.heading {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.heading p {
+    color: #54595F;
+    font-size: 40px;
+    font-weight: 500;
+    font-family: Poppins, sans-serif;
+    margin: 0;
+    text-align: center;
+    text-transform: capitalize;
+
+}
+
+.justification {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.justification p {
+    color: #54595F;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: Poppins, sans-serif;
+    margin: 0;
+    text-align: left;
+
+}
+
+.make-appointment {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 500px) {
+    .right-for-me {
+        width: 88%;
+        height: auto;
+        /* background-color: aliceblue; */
+        background-color: #FFCBA6;
+        position: absolute;
+        left: 3%;
+        top: 5%;
+        padding: 10px;
+    }
+
+    .heading p {
+        color: #54595F;
+        font-size: 17px;
+        font-weight: 500;
+        font-family: Poppins, sans-serif;
+        margin: 0;
+        text-align: center;
+        text-transform: capitalize;
+    }
+
+    .justification p {
+        color: #54595F;
+        font-size: 15px;
+        font-weight: 300;
+        font-family: Poppins, sans-serif;
+        margin: 0;
+        text-align: center;
+    }
+}

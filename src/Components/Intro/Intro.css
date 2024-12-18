@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Matemasie&family=Nerko+One&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+.intro-outer {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    position: relative;
+    overflow: visible;
+    margin-bottom: 150px;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.241);
+    /* background-color: rgba(0,0,0,.4); */
+    z-index: 9;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(10px);
+}
+
+.ticker {
+    width: 100%;
+    height: auto;
+    background-color: #00043573;
+
+}
+
+.intro-middle-section {
+    width: 100%;
+    height: auto;
+    /* background-color: aquamarine; */
+    display: flex;
+    justify-content: center;
+}
+
+.middle-section-content {
+    width: 90%;
+    height: 100%;
+    /* background-color: blueviolet; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slogan-area {
+    width: auto;
+    height: auto;
+    /* background-color: #02616a; */
+    overflow: hidden;
+}
+
+.slogan-area p {
+    font-size: 50px;
+    font-weight: 500;
+    letter-spacing: 0;
+    text-align: left;
+    color: #f3fdfe;
+    margin: 0;
+    font-family: Poppins, sans-serif;
+    font-style: normal
+}
+
+.changeable-slogan {
+    width: 100%;
+    height: auto;
+    display: flex;
+
+}
+
+.changeable-slogan p {
+    font-size: 50px;
+    font-weight: 500;
+    letter-spacing: 0;
+    text-align: left;
+    color: #f3fdfe;
+    margin: 0;
+    font-family: Poppins, sans-serif;
+    font-style: normal
+}
+
+.change-text {
+    /* background-color: rgb(106, 103, 103); */
+    width: 350px;
+    height: 60px;
+    margin-left: 10px;
+    overflow: hidden;
+}
+
+.change-text p {
+    font-style: italic;
+    font-weight: 700;
+    /* color: #0015fe; */
+    color: #fcffae;
+    animation-name: HeaderTextAnim;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+    word-wrap: break-word;
+    /* transform: translateY(-50px) */
+}
+
+@keyframes HeaderTextAnim {
+    0% {
+        transform: translateY(0)
+    }
+
+    20% {
+        transform: translateY(-60px)
+    }
+
+    40% {
+        transform: translateY(-100px)
+    }
+
+    60% {
+        transform: translateY(-150px)
+    }
+
+    80% {
+        transform: translateY(-250px)
+    }
+
+    100% {
+        transform: translateY(0px)
+    }
+}
+
+.social-media-area {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.social-icon {
+    width: auto;
+    height: auto;
+    /* margin-bottom: 10px; */
+}
+
+.social-icon span {
+    font-size: 30px;
+    color: white;
+
+}
+
+.get-appointment-btn-section {
+    width: 100%;
+    /* height: 100px; */
+    /* background-color: indigo; */
+    display: flex;
+    justify-content: center;
+}
+
+.get-appointment-btn-content {
+    width: 90%;
+    height: 100%;
+}
+
+
+.go-down-btn-section {
+    position: absolute;
+    width: auto;
+    height: auto;
+    bottom: -50px;
+    left: 50%;
+}
+
+.go-down-btn {
+    width: 78px;
+    height: 117px;
+    background-color: #183f30;
+    border: 10px solid #fff;
+    border-radius: 40px;
+    position: relative;
+    cursor: pointer;
+}
+
+.intro-right-arrow-icon span {
+    color: white;
+    font-size: 30px;
+}
+
+.intro-right-arrow-icon {
+    animation-name: introBtnAnim;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+
+.icon-section {
+    transform: rotate(90deg);
+}
+
+@keyframes introBtnAnim {
+    0% {
+        transform: translateY(-20px)
+    }
+
+    50% {
+        transform: translateY(22px)
+    }
+
+    100% {
+        transform: translateY(-20px)
+    }
+
+
+}
+
+@media screen and (max-width: 500px) {
+    .social-media-area {
+        display: none;
+    }
+
+    .slogan-area {
+        display: none;
+    }
+
+    .go-down-btn-section {
+        position: absolute;
+        width: auto;
+        height: auto;
+        bottom: -50px;
+        left: 42%;
+    }
+    .go-down-btn {
+        width: 65px;
+        height: 100px;
+        background-color: #183f30;
+        border: 10px solid #fff;
+        border-radius: 40px;
+        position: relative;
+        cursor: pointer;
+    }
+    .intro-right-arrow-icon span {
+        color: white;
+        font-size: 20px;
+    }
+    .intro-outer {
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        position: relative;
+        overflow: visible;
+        margin-bottom: 75px;
+    }
+}

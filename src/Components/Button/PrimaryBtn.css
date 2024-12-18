@@ -1,0 +1,95 @@
+
+.appointment-btn{
+    background-color: #c2c8b6;
+    width: 231px;
+    height: 69px;
+    border-radius: 279.69px;
+    gap: 11.65px;
+    text-transform: capitalize;
+    border: 1px solid #c2c8b6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 2.4rem; */
+    background: linear-gradient(90deg,#c2c8b6 50%,#183f30 0);
+    background-size: 200% 100%;
+    background-position: 0 100%;
+    transition: all .5s ease-out;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+.appointment-btn p{
+    color: #183f30;
+    font-size: 19px;
+    font-weight: 600;
+    margin: 0;
+}
+.appointment-btn-hover{
+    position: absolute;
+    width: 231px;
+    height: 69px;
+    background-color: #183f30;
+    /* left: -20px; */
+    transform: translateX(-300px);
+    border-radius: 279.69px;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.appointment-btn-hover p{
+    color: #ffffff;
+    font-size: 19px;
+    font-weight: 600;
+    margin: 0;
+}
+.appointment-btn:hover .appointment-btn-hover{
+    position: absolute;
+    width: 231px;
+    height: 69px;
+    /* padding: 2.91px 2.3px 1.99px 30.59px; */
+    background-color: black;
+    transform: translateX(0px);
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width: 500px) {
+
+    .appointment-btn{
+        background-color: #c2c8b6;
+        width: 200px;
+        height: 50px;
+        border-radius: 279.69px;
+        gap: 11.65px;
+        text-transform: capitalize;
+        border: 1px solid #c2c8b6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+        background: linear-gradient(90deg,#c2c8b6 50%,#183f30 0);
+        background-size: 200% 100%;
+        background-position: 0 100%;
+        transition: all .5s ease-out;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+    
+    }
+    .appointment-btn p{
+        color: #183f30;
+        font-size: 15px;
+        font-weight: 600;
+        margin: 0;
+    }
+    .appointment-btn-hover p{
+        color: #ffffff;
+        font-size: 15px;
+        font-weight: 600;
+        margin: 0;
+    }
+}
