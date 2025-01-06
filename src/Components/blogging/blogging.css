@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Matemasie&family=Nerko+One&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.bloggin-wrapper {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 150px;
+
+    .blogging-header {
+        width: 100%;
+        height: auto;
+        text-align: center;
+        margin-bottom: 10px;
+
+        p {
+            color: #54595F;
+            font-size: 25px;
+            font-weight: 500;
+            font-family: Poppins, sans-serif;
+            margin: 0;
+            text-transform: capitalize;
+        }
+    }
+
+    .blogs {
+        width: 90%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .small-card {
+            width: 367px;
+            height: 282px;
+            background-color: #54595F;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .big-card {
+            width: 450px;
+            height: 345px;
+            background-color: #54595F;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .card-style {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .upper-sec {
+            width: 100%;
+            height: auto;
+            padding: 10px;
+        }
+
+        .lower-sec {
+            width: 100%;
+            height: auto;
+            padding: 10px;
+            background-color: #4DB8A6;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            .date-and-read-more {
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: space-between;
+
+                p {
+                    margin: 0;
+                    color: white;
+                    font-size: 14px;
+                    font-weight: 200;
+                    font-family: Poppins, sans-serif;
+                }
+            }
+
+            p {
+                margin: 0;
+                color: white;
+                font-size: 17px;
+                font-weight: 400;
+                font-family: Poppins, sans-serif;
+            }
+        }
+
+        .latest-wrapper {
+            width: 100px;
+            height: 50px;
+            background-color: #4DB8A6;
+            border-radius: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            p {
+                margin: 0;
+                color: white;
+                font-weight: 700;
+                font-family: Poppins, sans-serif;
+                text-align: center;
+            }
+        }
+
+        .blog-img {
+            filter: blur(2px);
+        }
+
+        .blog-img-overlay {
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            z-index: 1;
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+    }
+}

@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Matemasie&family=Nerko+One&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+.footer-wrapper {
+    background-color: #101010;
+    width: 100%;
+    height: auto;
+}
+
+.row-col-style {
+    height: 500px;
+}
+
+.footer-wrapper-left {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    p {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        cursor: pointer;
+        color: white;
+        margin-top: 15px;
+    }
+}
+
+.footer-wrapper-right {
+    width: 100%;
+    height: 100%;
+
+    .wrapper-right-inner {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.display-around-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .wrapper-header {
+        width: 200px;
+        height: auto;
+        border-bottom: 1px solid #4DB8A6;
+        padding: 10px 0px;
+        margin-bottom: 15px;
+
+        p {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            font-weight: 200;
+            font-style: normal;
+            cursor: pointer;
+            color: white;
+            text-transform: capitalize;
+            font-size: 20px;
+        }
+    }
+}
+
+.wrapper-description {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    p {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        font-weight: 200;
+        font-style: normal;
+        cursor: pointer;
+        color: white;
+        text-transform: capitalize;
+        font-size: 15px;
+    }
+}

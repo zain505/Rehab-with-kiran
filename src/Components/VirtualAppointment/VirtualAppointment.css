@@ -8,7 +8,6 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 150px;
     padding: 20px 0px;
 
     .header {
@@ -68,6 +67,7 @@
             margin-bottom: 10px;
             display: flex;
             flex-direction: column;
+
             p {
                 margin: 0;
                 font-weight: 600;
@@ -75,13 +75,24 @@
         }
 
     }
-    .required-star{
+
+    .required-star {
         color: red;
     }
-    .virtual-submittion-btn-wrapper{
+
+    .virtual-submittion-btn-wrapper {
         width: 100%;
         display: flex;
         justify-content: center;
     }
 
+    .react-datepicker__view-calendar-icon input {
+        width: 100%;
+    }
+
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
 }

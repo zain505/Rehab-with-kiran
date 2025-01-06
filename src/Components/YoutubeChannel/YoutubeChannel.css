@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Matemasie&family=Nerko+One&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.yt-section-outer {
+    width: 100%;
+    height: 500px;
+    min-height: 500px;
+    background-color: #F7F4EB;
+    margin-bottom: 150px;
+    display: flex;
+    justify-content: space-around;
+
+    .content-text {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+        
+        .text-section {
+            width: auto;
+            height: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            .watchtv-section{
+                width: auto;
+                height: 80%;
+            }
+    
+            p {
+                color: orange;
+                font-size: 50px;
+                font-weight: 500;
+                font-family: Poppins, sans-serif;
+                margin: 0;
+                text-align: center;
+                text-transform: uppercase;
+
+                span {
+                    color: #54595F;
+                    font-size: 25px;
+                    font-weight: 500;
+                    font-family: Poppins, sans-serif;
+                    margin: 0;
+                    text-align: center;
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+
+    .content-media {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
