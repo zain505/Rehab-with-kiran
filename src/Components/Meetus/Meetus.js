@@ -3,12 +3,15 @@ import "./Meetus.css";
 import Photo from "../../media/4.jpeg"
 import PrimBtn from "../Button/PrimaryBtn"
 import { Container, Col, Row } from 'reactstrap';
+import { Link } from 'react-router-dom';
+import ScrollToTop from '../ScrollToTop/ScrollToTop';
 function Meetus() {
 
 
     return (
         <>
             <div className='meet-us-section'>
+                <ScrollToTop/>
                 <div className='meet-us-content'>
                     <div className='text-content'>
                         <p className='meet-dr-heading'>Meet Dr. Kiran Fatima</p>
@@ -21,7 +24,8 @@ function Meetus() {
                             Her approach integrates comprehensive treatment strategies, emphasizing personalized care and holistic well-being.
                         </p>
                         <div className='meet-us-btn'>
-                            <PrimBtn  title={"Meet Dr. Kiran"} titleOnHover={"Meet Dr. Kiran"} />
+                            
+                            <p><Link style={{textDecoration:'none'}} to="/story"><PrimBtn  title={"Meet Dr. Kiran"} titleOnHover={"Meet Dr. Kiran"} /></Link></p>
                         </div>
                     </div>
                     <div className='image-area'>

@@ -1,6 +1,8 @@
 import React from 'react';
 import "./Tele.css"
 import PrimBtn from "../Button/PrimaryBtn"
+import { Link } from 'react-router-dom';
+
 
 function Tele() {
     return (
@@ -15,7 +17,7 @@ function Tele() {
                         Telerehabilitation in physiotherapy refers to the use of digital communication technologies to deliver rehabilitation services remotely. This approach allows patients to receive assessments, consultations, and therapy sessions via video calls, mobile apps, or other online platforms. It enables patients to continue their rehabilitation from home, increasing accessibility and convenience while reducing the need for in-person visits.</p>
                     </div>
                     <div className='make-appointment'>
-                        <PrimBtn  title={"Get Appointment"} titleOnHover={"Get Appointment"} />
+                        <p><Link className='menu-item' style={{textDecoration:'none'}} to="/appointment"><PrimBtn  title={"Get Appointment"} titleOnHover={"Get Appointment"} /></Link></p>
                     </div>
                 </div>
             </div>

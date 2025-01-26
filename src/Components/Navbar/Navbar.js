@@ -5,6 +5,8 @@ import Logo2 from "../../media/logo2.png"
 import Logo3 from "../../media/logo3.png"
 import Arrow from "../../media/arrow.png"
 import PrimaryBtn from "../../Components/Button/PrimaryBtn"
+import { Link } from 'react-router-dom';
+
 
 function Navbar() {
 
@@ -17,11 +19,11 @@ function Navbar() {
             <img src={Logo3} />
           </div>
           <div className='menu-items'>
-            <p className='menu-item'>Home</p>
-            <p className='menu-item'>Get Appointment</p>
-            <p className='menu-item'>My Story</p>
-            <p className='menu-item'>Blogs</p>
-            <p className='menu-item'>Contact Me</p>
+            <p className='menu-item'><Link className='menu-item' style={{textDecoration:'none'}} to="/">Home</Link></p>
+            <p className='menu-item'><Link className='menu-item' style={{textDecoration:'none'}} to="/appointment">Get Appointment</Link></p>
+            <p className='menu-item'><Link className='menu-item' style={{textDecoration:'none'}} to="/story">My Story</Link></p>
+            <p className='menu-item'><Link className='menu-item' style={{textDecoration:'none'}} to="/blogs">Blogs</Link></p>
+            <p className='menu-item'><Link className='menu-item' style={{textDecoration:'none'}} to="/contact">Contact Me</Link></p>
           </div>
           <div className='language'>
             <span className="icon-world"></span>
@@ -35,7 +37,7 @@ function Navbar() {
           <p>Your Personal physician is one click away</p>
         </div>
         <div className='navbar-appointBtn'>
-          <PrimaryBtn titleOnHover={"Get Appointment"} title={"Get Appointment"} />
+          <p onClick={"/appointment"}><PrimaryBtn titleOnHover={"Get Appointment"} title={"Get Appointment"} /></p>
         </div>
       </div>
       

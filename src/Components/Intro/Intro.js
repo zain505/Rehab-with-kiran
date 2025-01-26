@@ -5,8 +5,12 @@ import PlayBack from "../../media/videoplayback.mp4";
 
 import Navbar from "../Navbar/Navbar";
 import PrimBtn from "../Button/PrimaryBtn"
+import { Link } from 'react-router-dom';
 
 function Intro() {
+    const socialMediaUrl = (url) => {
+        window.open(url, "_blank");
+      };
     return (
         <>
             <div className='intro-outer'>
@@ -29,16 +33,16 @@ function Intro() {
                                 </div>
                             </div>
                             <div className='social-media-area'>
-                                <div className='social-icon'><span className="icon-instagram"></span></div>
-                                <div className='social-icon'><span className="icon-twitter"></span></div>
-                                <div className='social-icon'><span className="icon-youtube"></span></div>
-                                <div className='social-icon'><span className="icon-facebook-logo-in-circular-shape"></span></div>
+                                <div onClick={()=>socialMediaUrl("https://github.com/settings/profile")} className='social-icon'><span className="icon-instagram"></span></div>
+                                <div onClick={()=>socialMediaUrl("https://github.com/settings/profile")} className='social-icon'><span className="icon-twitter"></span></div>
+                                <div onClick={()=>socialMediaUrl("https://github.com/settings/profile")} className='social-icon'><span className="icon-youtube"></span></div>
+                                <div onClick={()=>socialMediaUrl("https://github.com/settings/profile")} className='social-icon'><span className="icon-facebook-logo-in-circular-shape"></span></div>
                             </div>
                         </div>
                     </div>
                     <div className='get-appointment-btn-section'>
                         <div className='get-appointment-btn-content'>
-                           <PrimBtn title={"get appointment"} titleOnHover={"get appointment"}/>
+                        <p><Link className='menu-item' style={{textDecoration:'none'}} to="/appointment"><PrimBtn  title={"Get Appointment"} titleOnHover={"Get Appointment"} /></Link></p>
                         </div>
                     </div>
                     <div className='go-down-btn-section'>

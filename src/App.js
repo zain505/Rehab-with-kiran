@@ -3,7 +3,10 @@ import './App.css';
 
 import {
   createHashRouter,
+  Route,
+  Router,
   RouterProvider,
+  Routes,
 } from "react-router-dom";
 
 import Home from "./Pages/Home/Home";
@@ -12,6 +15,10 @@ import "./icomoon/style.css"
 import Logo3 from "./media/logo3.png"
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Whatsapp from './Components/whatsapp/Whatsapp';
+import Story from './Pages/Story/Story';
+import Blog from './Pages/Blogs/Blog';
+import Contact from './Pages/Contacts/Contact';
 
 
 function App() {
@@ -26,6 +33,18 @@ function App() {
     {
       path: "/appointment",
       element: <Appointment />,
+    },
+    {
+      path: "/story",
+      element: <Story />,
+    },
+    {
+      path: "/blogs",
+      element: <Blog/>,
+    },
+    {
+      path: "/contact",
+      element: <Contact/>,
     },
   ]);
   const sendEmail = () => {
@@ -85,12 +104,6 @@ function App() {
             </div>
           </div>
           <div className='menu-item-wrapper'>
-            <div className='menu-item-mob'><p className='item'>Holistic Approach</p></div>
-            <div className='arrow-icon'>
-              <span className="icon-right-arrow1"></span>
-            </div>
-          </div>
-          <div className='menu-item-wrapper'>
             <div className='menu-item-mob'><p className='item'>Get Appointment</p></div>
             <div className='arrow-icon'>
               <span className="icon-right-arrow1"></span>
@@ -130,6 +143,7 @@ function App() {
           </div>
         </div>
       </div>
+      <Whatsapp/>
       <RouterProvider router={router} />
     </div>
   );

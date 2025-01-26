@@ -7,12 +7,17 @@ import DatePicker from "react-datepicker";
 
 import "react-datepicker/dist/react-datepicker.css";
 import { type } from '@testing-library/user-event/dist/type';
+import ScrollToTop from '../ScrollToTop/ScrollToTop';
 
 function VirtalAppointment() {
     const [startDate, setStartDate] = useState(new Date());
+    const [name, setName] = useState("")
+    const [email, setEmail] = useState("")
     const [countriesDialingCodes, setCountriesDialingCode] = useState([]);
     const [countryDialingCode, setCountryDialingCode] = useState(null);
     const [UserPhone, setUserPhone] = useState(null);
+    const [channel,setChannel] = useState("")
+    const [appointmentType, setAppointmentType] = useState("")
 
     useEffect(() => {
         fetch("https://restcountries.com/v3.1/all").then(response => {
@@ -21,6 +26,22 @@ function VirtalAppointment() {
             })
         })
     }, [])
+
+    const handleName=(event)=>{
+        setName(event.target.value)
+    }
+
+    const handleAppointmentType=(event)=>{
+        setAppointmentType(event.target.value)
+    }
+
+    const handleEmail=(event)=>{
+        setEmail(event.target.value)
+    }
+
+    const handleChannel=(event)=>{
+        setChannel(event.target.value)
+    }
 
     const reArrangeCountryDialingCode = (countryList) => {
         let newDialingCode = []
@@ -51,6 +72,7 @@ function VirtalAppointment() {
     return (
         <>
             <div className='appointment-wrapper'>
+                <ScrollToTop/>
                 <div className='header'>
                     <p>Virtual Appointments Available!</p>
                 </div>
@@ -60,11 +82,11 @@ function VirtalAppointment() {
                 <div className='web-form-view'>
                     <div className='input-wrapper-full'>
                         <p>Full Name: <span className='required-star'>*</span></p>
-                        <Input />
+                        <Input type="text" value={name} onChange={handleName}/>
                     </div>
                     <div className='input-wrapper-half'>
                         <p>Email: <span className='required-star'>*</span></p>
-                        <Input />
+                        <Input type="text" value={email} onChange={handleEmail}/>
                     </div>
                     <div className='input-wrapper-half'>
                         <p>WhatsApp: <span className='required-star'>*</span> (ex. 3123456789)</p>
@@ -108,16 +130,18 @@ function VirtalAppointment() {
                             className=''
                             showIcon
                             selected={startDate}
-                            onChange={(date) => setStartDate(date)}
+                            onChange={(startDate) => setStartDate(startDate)}
                         />
                     </div>
-                    <div className='input-wrapper-full'>
+                    <div className='input-wrapper-half'>
                         <FormGroup>
                             <p>Which channel we can speak with you: <span className='required-star'>*</span></p>
                             <Input
                                 id="exampleSelect"
                                 name="select"
                                 type="select"
+                                onChange={handleChannel}
+                                value={channel}
                             >
                                 <option>
                                     Select One
@@ -130,6 +154,31 @@ function VirtalAppointment() {
                                 </option>
                                 <option>
                                     Skype
+                                </option>
+                            </Input>
+                        </FormGroup>
+                    </div>
+                    <div className='input-wrapper-half'>
+                    <FormGroup>
+                            <p>Appointment type: <span className='required-star'>*</span></p>
+                            <Input
+                                id="exampleSelect"
+                                name="select"
+                                type="select"
+                                onChange={handleAppointmentType}
+                                value={appointmentType}
+                            >
+                                <option>
+                                    Select One
+                                </option>
+                                <option>
+                                    Therapy
+                                </option>
+                                <option>
+                                    Consultation
+                                </option>
+                                <option>
+                                    Counselling
                                 </option>
                             </Input>
                         </FormGroup>

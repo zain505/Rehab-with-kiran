@@ -1,9 +1,17 @@
 import React from 'react';
+import Navbar from '../../Components/Navbar/Navbar';
+import VirtalAppointment from '../../Components/VirtualAppointment/VirtualAppointment';
+import Footer from '../../Components/Footer/Footer';
+
 
 function Appointment() {
-  const greeting = 'Hello Function Component!';
-
-  return <h1>{greeting}</h1>;
+  return (
+    <>
+    <Navbar/>
+    <VirtalAppointment/>
+    <Footer/>
+    </>
+  )
 }
 
 export default Appointment;

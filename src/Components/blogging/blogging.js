@@ -3,12 +3,17 @@ import "./blogging.css";
 import FootAnkle from "../../media/foot_ankle.jpg"
 import BackBone from "../../media/back-bone.jpg"
 import Posture from "../../media/posture.jpg"
+import { Link } from 'react-router-dom';
+import ScrollToTop from '../ScrollToTop/ScrollToTop';
+import PrimaryBtn from '../Button/PrimaryBtn';
 
 
-function blogging() {
+function Blogging() {
+
     return (
         <>
             <div className='bloggin-wrapper'>
+            <ScrollToTop/>
                 <div className='blogging-header'>
                     <p>stay informed</p>
                 </div>
@@ -65,10 +70,11 @@ function blogging() {
                         <img src={BackBone} className='blog-img' alt='FootAnkle' height={"100%"} width={"100%"} />
                     </div>
                 </div>
+                <p ><Link className='menu-item' style={{textDecoration:'none'}} to="/blogs"><PrimaryBtn  title={"Read More"} titleOnHover={"Read More"} /></Link></p>
             </div>
 
         </>
     )
 }
 
-export default blogging;
+export default Blogging;

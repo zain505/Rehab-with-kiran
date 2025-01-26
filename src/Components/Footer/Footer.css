@@ -41,8 +41,8 @@
 
 .display-around-wrapper {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content:left;
+    align-items:flex-start;
     flex-direction: column;
 
     .wrapper-header {
@@ -50,6 +50,7 @@
         height: auto;
         border-bottom: 1px solid #4DB8A6;
         padding: 10px 0px;
+        margin-top: 70px;
         margin-bottom: 15px;
 
         p {

@@ -6,7 +6,7 @@ import Tele from "../../Components/Tele/Tele";
 import VirtualAppointment from "../../Components/VirtualAppointment/VirtualAppointment";
 import AwardsSec from "../../Components/AwardsSec/AwardsSec";
 import YoutubeChannel from "../../Components/YoutubeChannel/YoutubeChannel";
-import Blogging from "../../Components/blogging/blogging";
+import Blogging from "../../Components/blogging/Blogging";
 import SignUp from "../../Components/SignUp/SignUp";
 import Footer from "../../Components/Footer/Footer";
 
