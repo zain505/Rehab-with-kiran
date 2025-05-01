@@ -4,6 +4,7 @@ import PrimBtn from "../Button/PrimaryBtn"
 import { FormGroup, Input, Label } from 'reactstrap';
 // import { DatePicker } from 'reactstrap-date-picker'
 import DatePicker from "react-datepicker";
+import axios from 'axios';
 
 import "react-datepicker/dist/react-datepicker.css";
 import { type } from '@testing-library/user-event/dist/type';
@@ -14,18 +15,50 @@ function VirtalAppointment() {
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
     const [countriesDialingCodes, setCountriesDialingCode] = useState([]);
+    const [address,setAddress] = useState("");
     const [countryDialingCode, setCountryDialingCode] = useState(null);
-    const [UserPhone, setUserPhone] = useState(null);
+    const [UserPhone, setUserPhone] = useState("");
     const [channel,setChannel] = useState("")
     const [appointmentType, setAppointmentType] = useState("")
+    const [message,setMessage] = useState("")
+    const [findUs,setFindUs] = useState("")
 
     useEffect(() => {
-        fetch("https://restcountries.com/v3.1/all").then(response => {
-            response.json().then(country => {
-                reArrangeCountryDialingCode(country)
-            })
-        })
+        const fetchCountries = async ()=>{
+            try {
+                const response = await fetch("https://restcountries.com/v3.1/all");
+                const countryList = await response.json()
+                    reArrangeCountryDialingCode(countryList); 
+            } catch (error) {
+                console.error("Error fetching country codes:",error);
+            }
+        }
+        fetchCountries();
     }, [])
+
+    const getVirtualResponse = async ()=>{
+        const payload = {
+            name,
+            email,
+            whatsApp: `${countryDialingCode}${UserPhone}`,
+            address,
+            appointmentDate: startDate,
+            channelSelection: channel,
+            appointmentType,
+            message,
+            findUs,
+        };
+        try {
+            const response = await axios.post("http://192.168.100.70:5000/user/createVirtualAppointment",payload)
+            
+                if(response.status === 200)
+                {
+                    alert("Appointment booked successfully!");
+                }  
+        } catch (error) {
+            console.error("Error booking appointment",error)
+        }
+    }
 
     const handleName=(event)=>{
         setName(event.target.value)
@@ -39,8 +72,18 @@ function VirtalAppointment() {
         setEmail(event.target.value)
     }
 
+    const handleAddress=(event)=>{
+        setAddress(event.target.value)
+    }
+
     const handleChannel=(event)=>{
         setChannel(event.target.value)
+    }
+    const handleMessage=(event)=>{
+        setMessage(event.target.value)
+    }
+    const handleFindUs=(event)=>{
+        setFindUs(event.target.value)
     }
 
     const reArrangeCountryDialingCode = (countryList) => {
@@ -59,12 +102,12 @@ function VirtalAppointment() {
     }
 
     const handleCountryCode = (e) => {
-        const { value } = e.target; // Get the selected value
+        const { value } = e.target;
         setCountryDialingCode(value)
     }
 
     const handlePhoneNumber = (event) => {
-        const { value } = event.target; // Get the selected value
+        const { value } = event.target; 
         if (!isNaN(value) && value.length <= 10) {
             setUserPhone(value)
         }
@@ -101,22 +144,22 @@ function VirtalAppointment() {
                                 style={{ width: 100 }}
                             >
                                 {
-                                    countriesDialingCodes?.map(info => {
+                                    countriesDialingCodes?.map((info,index) => {
                                         return (
-                                            <option value={info.Dialingcode}>
+                                            <option key={index} value={info.Dialingcode}>
                                                 {info.countryName}{"-"}({info.Dialingcode})
                                             </option>
                                         )
                                     })
                                 }
                             </Input>
-                            <Input type='number' value={UserPhone} onChange={(e) => handlePhoneNumber(e)} />
+                            <Input type="number" value={UserPhone} onChange={(e) => handlePhoneNumber(e)} />
                         </FormGroup>
 
                     </div>
                     <div className='input-wrapper-half'>
                         <p>Address:  </p>
-                        <Input />
+                        <Input type="text" value={address} onChange={handleAddress} />
                     </div>
                     <div className='input-wrapper-half'>
                         <p>When you want:  <span className='required-star'>*</span></p>
@@ -185,7 +228,7 @@ function VirtalAppointment() {
                     </div>
                     <div className='input-wrapper-full'>
                         <p>Message: </p>
-                        <Input type='textarea' />
+                        <Input type="textarea" value={message} onChange={handleMessage} />
                     </div>
                     <div className='input-wrapper-full'>
                         <FormGroup>
@@ -194,6 +237,8 @@ function VirtalAppointment() {
                                 id="exampleSelect"
                                 name="select"
                                 type="select"
+                                value={findUs}
+                                onChange={handleFindUs}
                             >
                                 <option>
                                     Select One
@@ -211,11 +256,8 @@ function VirtalAppointment() {
                         </FormGroup>
                     </div>
                     <div className='virtual-submittion-btn-wrapper'>
-                        <PrimBtn title={"Send"} titleOnHover={"Send"} />
-
+                        <PrimBtn title={"Send"} titleOnHover={"Send"} onClick={getVirtualResponse} />
                     </div>
-
-
                 </div>
             </div>
 

@@ -37,7 +37,7 @@ function Navbar() {
           <p>Your Personal physician is one click away</p>
         </div>
         <div className='navbar-appointBtn'>
-          <p onClick={"/appointment"}><PrimaryBtn titleOnHover={"Get Appointment"} title={"Get Appointment"} /></p>
+          <p><Link className='menu-item' style={{textDecoration:'none'}} to="/appointment"><PrimaryBtn titleOnHover={"Get Appointment"} title={"Get Appointment"} /></Link></p>
         </div>
       </div>
       

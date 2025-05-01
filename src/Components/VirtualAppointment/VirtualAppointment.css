@@ -2,97 +2,215 @@
 
 .appointment-wrapper {
     width: 100%;
-    height: auto;
-    background-color: #c2c8b6;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f0f5f4, #e6f0ef);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 20px 0px;
+    padding: 40px 20px;
+}
 
-    .header {
-        width: 100%;
-        height: auto;
-        text-align: center;
+.header {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+}
 
-        p {
-            font-family: "Poppins", sans-serif;
-            font-size: 40px;
-            font-weight: 500;
-            margin: 0;
-        }
-    }
+.header p {
+    font-family: "Poppins", sans-serif;
+    font-size: 2.8rem;
+    color: #2C635A;
+    font-weight: 600;
+    margin: 0;
+    position: relative;
+    padding-bottom: 15px;
+}
 
-    .slogan {
-        width: 100%;
-        height: auto;
-        text-align: center;
-        margin-bottom: 30px;
+.header p::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(to right, #2C635A, #31AAA2);
+    border-radius: 2px;
+}
 
-        p {
-            font-family: "Poppins", sans-serif;
-            font-size: 16px;
-            font-weight: 300;
-            margin: 0;
-        }
-    }
+.slogan {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 40px;
+}
 
+.slogan p {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.web-form-view {
+    width: 90%;
+    max-width: 1000px;
+    padding: 40px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 10px 30px rgba(44, 99, 90, 0.1);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.input-wrapper-half {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+}
+
+.input-wrapper-full {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.input-wrapper-half p, .input-wrapper-full p {
+    margin: 0 0 8px 0;
+    font-weight: 500;
+    color: #2C635A;
+    font-size: 1rem;
+}
+
+.required-star {
+    color: #ff4444;
+    margin-left: 3px;
+}
+
+/* Input styling */
+.web-form-view input, 
+.web-form-view select, 
+.web-form-view textarea {
+    border: 1px solid rgba(44, 99, 90, 0.2);
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.web-form-view input:focus, 
+.web-form-view select:focus, 
+.web-form-view textarea:focus {
+    border-color: #31AAA2;
+    box-shadow: 0 0 0 2px rgba(49, 170, 162, 0.1);
+    outline: none;
+}
+
+/* Date picker styling */
+.react-datepicker-wrapper {
+    width: 100%;
+}
+
+.react-datepicker__input-container input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(44, 99, 90, 0.2);
+}
+
+/* Submit button wrapper */
+.virtual-submittion-btn-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Remove number input spinners */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
     .web-form-view {
-        width: 60%;
-        height: auto;
-        padding: 10px;
-        border-radius: 20px;
-        background-color: #dbdbdb91;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-
-        .input-wrapper-half {
-            width: 49%;
-            height: auto;
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 10px;
-
-
-            p {
-                margin: 0;
-                font-weight: 600;
-            }
-        }
-
-        .input-wrapper-full {
-            width: 100%;
-            height: auto;
-            margin-bottom: 10px;
-            display: flex;
-            flex-direction: column;
-
-            p {
-                margin: 0;
-                font-weight: 600;
-            }
-        }
-
+        width: 95%;
+        padding: 20px;
     }
 
-    .required-star {
-        color: red;
-    }
-
-    .virtual-submittion-btn-wrapper {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-
-    .react-datepicker__view-calendar-icon input {
+    .input-wrapper-half {
         width: 100%;
     }
 
-    input[type="number"]::-webkit-inner-spin-button,
-    input[type="number"]::-webkit-outer-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
+    .header p {
+        font-size: 2rem;
     }
+
+    .slogan p {
+        font-size: 1rem;
+    }
+}
+
+/* Animation for form elements */
+.web-form-view {
+    animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Country code select styling */
+.web-form-view select {
+    appearance: auto; /* Show default dropdown arrow */
+    background: white;
+    cursor: pointer;
+    padding-right: 30px; /* Space for arrow */
+}
+
+/* Phone number input group */
+.input-wrapper-half .form-group {
+    display: flex;
+    gap: 10px;
+}
+
+/* Country code select container */
+.input-wrapper-half .form-group select {
+    width: 140px !important; /* Fixed width for country code */
+    flex-shrink: 0;
+    font-size: 0.9rem;
+}
+
+/* Phone number input */
+.input-wrapper-half .form-group input {
+    flex: 1;
+}
+
+/* Dropdown options styling */
+.web-form-view select option {
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+/* Style for focused select */
+.web-form-view select:focus {
+    border-color: #31AAA2;
+    box-shadow: 0 0 0 2px rgba(49, 170, 162, 0.1);
+}
+
+/* Make sure the FormGroup maintains proper spacing */
+.form-group {
+    margin-bottom: 0;
+    width: 100%;
 }

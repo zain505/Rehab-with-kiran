@@ -4,7 +4,7 @@ import "./PrimaryBtn.css";
 function PrimaryBtn(props) {
     return (
         <>
-            <button className='appointment-btn'>
+            <button className='appointment-btn' onClick={props.onClick}>
                 <p>{props.title}</p>
                 <div className='appointment-btn-hover'>
                     <p>{props.titleOnHover}</p>

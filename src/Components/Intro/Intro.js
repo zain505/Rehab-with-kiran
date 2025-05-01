@@ -1,8 +1,6 @@
 import React from 'react';
 import "./Intro.css"
-
 import PlayBack from "../../media/videoplayback.mp4";
-
 import Navbar from "../Navbar/Navbar";
 import PrimBtn from "../Button/PrimaryBtn"
 import { Link } from 'react-router-dom';
@@ -33,10 +31,10 @@ function Intro() {
                                 </div>
                             </div>
                             <div className='social-media-area'>
-                                <div onClick={()=>socialMediaUrl("https://github.com/settings/profile")} className='social-icon'><span className="icon-instagram"></span></div>
-                                <div onClick={()=>socialMediaUrl("https://github.com/settings/profile")} className='social-icon'><span className="icon-twitter"></span></div>
-                                <div onClick={()=>socialMediaUrl("https://github.com/settings/profile")} className='social-icon'><span className="icon-youtube"></span></div>
-                                <div onClick={()=>socialMediaUrl("https://github.com/settings/profile")} className='social-icon'><span className="icon-facebook-logo-in-circular-shape"></span></div>
+                                <div onClick={()=>socialMediaUrl("https://www.instagram.com/dr_kiran_fatima?igsh=MW8yd3YxdW1pZG5uOQ==")} className='social-icon'><span className="icon-instagram"></span></div>
+                                <div onClick={()=>socialMediaUrl("")} className='social-icon'><span className="icon-twitter"></span></div>
+                                <div onClick={()=>socialMediaUrl("https://www.youtube.com/@kiranPT237")} className='social-icon'><span className="icon-youtube"></span></div>
+                                <div onClick={()=>socialMediaUrl("https://www.facebook.com/share/1EaArVeGVy/")} className='social-icon'><span className="icon-facebook-logo-in-circular-shape"></span></div>
                             </div>
                         </div>
                     </div>

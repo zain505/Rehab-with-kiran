@@ -19,9 +19,12 @@ import Whatsapp from './Components/whatsapp/Whatsapp';
 import Story from './Pages/Story/Story';
 import Blog from './Pages/Blogs/Blog';
 import Contact from './Pages/Contacts/Contact';
+import AdminDashboard from './Components/adminController/AdminDashboard';
 
 
 function App() {
+
+  const SECRETADMINURL = "secret@url!!drkiranfatimaadmincontroller"
 
   const [openSideMenuBar, setOpenSideMenuBar] = useState(false);
 
@@ -46,12 +49,16 @@ function App() {
       path: "/contact",
       element: <Contact/>,
     },
+    {
+      path: `/${SECRETADMINURL}`,
+      element: <AdminDashboard/>,
+    },
   ]);
   const sendEmail = () => {
     window.open("https://mail.google.com/mail/u/0/?fs=1&to=kiran.fatimakf530@gmail.com&su=Get Appointment&body=&bcc=&tf=cm")
   }
   const sendWhatsAppMessage = () => {
-    let staticMessage = "Hi, Doc! i want to get appointment."
+    let staticMessage = "This is Dr. Kiran How can I help you?"
     window.open(`https://api.whatsapp.com/send?phone=+923261997724&text=${staticMessage}`, "_blank");
   }
   return (
