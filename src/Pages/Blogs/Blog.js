@@ -14,11 +14,12 @@ export default function BlogPage() {
   const [blogs,setBlogs] = useState([])
   const [loading, setLoading] = useState(false)
   const getBlogDataById = async(id)=>{
-    await axios.get(`http://192.168.172.170:5000/user/getBlogById&Id=${id}`)
+    await axios.get(`http://localhost:5000/user/getBlogById&Id=${id}`)
     .then(response=>{
       if(response.status===200)
       {
       setSelectedBlog(response.data)
+      console.log(response.data)
       setLoading(false)
     }
     })
@@ -30,7 +31,7 @@ export default function BlogPage() {
 
   const getAllBlogs = async ()=>{
     setLoading(true)
-    await axios.get("http://192.168.172.170:5000/user/getBlogs")
+    await axios.get("http://localhost:5000/user/getBlogs")
     .then(response=>{
       if(response.status===200)
       {

@@ -3,12 +3,12 @@ import { FaWhatsapp } from "react-icons/fa";
 import "./Whatsapp.css"; // Add styles if needed
 
 const Whatsapp = () => {
-  let staticMessage = "This is Dr. Kiran How can i help you??"
+  let staticMessage = encodeURIComponent("This is Dr. Kiran. How can I help you?");
 
   return (
     <div className="whatsapp-container">
       <a
-        href={`https://api.whatsapp.com/send?phone=+923261997724&text=${staticMessage}`}
+        href={`https://api.whatsapp.com/send?phone=923261997724&text=${staticMessage}`}
         target="_blank"
         rel="noopener noreferrer"
         className="whatsapp-button"

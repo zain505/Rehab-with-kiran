@@ -58,8 +58,8 @@ function App() {
     window.open("https://mail.google.com/mail/u/0/?fs=1&to=kiran.fatimakf530@gmail.com&su=Get Appointment&body=&bcc=&tf=cm")
   }
   const sendWhatsAppMessage = () => {
-    let staticMessage = "This is Dr. Kiran How can I help you?"
-    window.open(`https://api.whatsapp.com/send?phone=+923261997724&text=${staticMessage}`, "_blank");
+    let staticMessage = "This is Dr. Kiran. How can I help you?"
+    window.open(`https://api.whatsapp.com/send?phone=923261997724&text=${staticMessage}`, "_blank");
   }
   return (
     <div className="App">
