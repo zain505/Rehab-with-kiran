@@ -2,6 +2,7 @@
   "name": "doc_website",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://zain505.github.io/Rehab-with-kiran",
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
