@@ -12,7 +12,7 @@ function Intro() {
     return (
         <>
             <div className='intro-outer'>
-                <div class="overlay">
+                <div className='overlay'>
                     <div className='ticker'>
                         <p className='text-color-white'>Happening Now! 50% Discount, Click On Get Appointment</p>
                     </div>
@@ -25,8 +25,12 @@ function Intro() {
                                 <div className='changeable-slogan'>
                                     <p>Rehab with</p>
                                     <div className='change-text'>
-                                        <p>Care Compassion Professional Change</p>
-
+                                        <div className='change-text-track'>
+                                            <p>Care</p>
+                                            <p>Compassion</p>
+                                            <p>Professional</p>
+                                            <p>Change</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

@@ -216,4 +216,37 @@ section h2::after {
     }
 }
 
+@media (max-width: 480px) {
+    .hero {
+        height: 320px;
+        padding: 16px;
+        border-radius: 28px;
+    }
+
+    .hero::before {
+        border-radius: 25px;
+    }
+
+    .caption {
+        max-width: 100%;
+        margin: 0 0 12px;
+        padding: 16px;
+        font-size: 1rem;
+        transform: none;
+    }
+
+    section {
+        margin: 20px 0;
+        padding: 16px;
+    }
+
+    .video {
+        padding: 20px 16px;
+    }
+
+    .video iframe {
+        height: 220px;
+    }
+}
+
 

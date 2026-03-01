@@ -16,4 +16,16 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-decoration: none;
   }
+
+  @media (max-width: 768px) {
+    .whatsapp-container {
+      left: 12px;
+      bottom: 12px;
+    }
+
+    .whatsapp-button {
+      width: 44px;
+      height: 44px;
+    }
+  }
   

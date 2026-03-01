@@ -4,6 +4,7 @@
 .intro-outer {
     width: 100%;
     height: 100vh;
+    min-height: 100svh;
     background-color: black;
     position: relative;
     overflow: visible;
@@ -88,44 +89,49 @@
     height: 60px;
     margin-left: 10px;
     overflow: hidden;
+    line-height: 60px;
 }
 
-.change-text p {
+.change-text-track {
+    animation-name: HeaderTextAnim;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.change-text-track p {
     font-style: italic;
     font-weight: 700;
     /* color: #0015fe; */
     color: #fcffae;
-    animation-name: HeaderTextAnim;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-out;
-    word-wrap: break-word;
-    /* transform: translateY(-50px) */
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
 }
 
 @keyframes HeaderTextAnim {
-    0% {
-        transform: translateY(0)
-    }
-
+    0%,
     20% {
-        transform: translateY(-60px)
+        transform: translateY(0);
     }
 
-    40% {
-        transform: translateY(-100px)
+    25%,
+    45% {
+        transform: translateY(-60px);
     }
 
-    60% {
-        transform: translateY(-150px)
+    50%,
+    70% {
+        transform: translateY(-120px);
     }
 
-    80% {
-        transform: translateY(-250px)
+    75%,
+    95% {
+        transform: translateY(-180px);
     }
 
     100% {
-        transform: translateY(0px)
+        transform: translateY(0);
     }
 }
 
@@ -213,40 +219,153 @@
 }
 
 @media screen and (max-width: 500px) {
+    .intro-outer {
+        width: 100%;
+        min-height: 100svh;
+        height: 100svh;
+        background-color: black;
+        position: relative;
+        overflow: visible;
+        margin-bottom: 72px;
+    }
+
+    .slogan-area {
+        display: block;
+    }
+
+    .slogan-area p,
+    .changeable-slogan p {
+        font-size: clamp(22px, 7.8vw, 34px);
+    }
+
+    .change-text,
+    .change-text-track p {
+        height: 52px;
+        line-height: 52px;
+    }
+
+    .change-text-track {
+        animation-name: HeaderTextAnimMobile;
+    }
+
+    .go-down-btn-section {
+        bottom: 14px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .go-down-btn {
+        width: 58px;
+        height: 84px;
+        border: 8px solid #fff;
+    }
+
+    .intro-right-arrow-icon span {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .intro-outer {
+        min-height: 100svh;
+        height: 100svh;
+        margin-bottom: 72px;
+    }
+
+    .overlay {
+        justify-content: flex-start;
+        padding: 0 0 96px;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.22) 0%, rgba(0, 0, 0, 0.45) 34%, rgba(0, 0, 0, 0.82) 100%);
+    }
+
+    .intro-middle-section {
+        flex: 1;
+        align-items: flex-end;
+        padding: 20px 0 0;
+    }
+
+    .middle-section-content {
+        width: 90%;
+        min-height: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        gap: 16px;
+    }
+
+    .slogan-area {
+        display: block;
+        width: 100%;
+        max-width: 340px;
+        padding-bottom: 32px;
+    }
+
+    .slogan-area p,
+    .changeable-slogan p {
+        font-size: clamp(26px, 7vw, 40px);
+        line-height: 1.08;
+    }
+
+    .changeable-slogan {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+    }
+
+    .change-text {
+        width: 100%;
+        max-width: 280px;
+        margin-left: 0;
+    }
+
     .social-media-area {
         display: none;
     }
 
-    .slogan-area {
+    .get-appointment-btn-section {
         display: none;
     }
 
+    .get-appointment-btn-content {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+    }
+
     .go-down-btn-section {
-        position: absolute;
-        width: auto;
-        height: auto;
-        bottom: -50px;
-        left: 42%;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 14px;
     }
+
     .go-down-btn {
-        width: 65px;
-        height: 100px;
-        background-color: #183f30;
-        border: 10px solid #fff;
-        border-radius: 40px;
-        position: relative;
-        cursor: pointer;
+        background-color: rgba(24, 63, 48, 0.9);
+        border-width: 8px;
     }
-    .intro-right-arrow-icon span {
-        color: white;
-        font-size: 20px;
+}
+
+@keyframes HeaderTextAnimMobile {
+    0%,
+    20% {
+        transform: translateY(0);
     }
-    .intro-outer {
-        width: 100%;
-        height: 100%;
-        background-color: black;
-        position: relative;
-        overflow: visible;
-        margin-bottom: 75px;
+
+    25%,
+    45% {
+        transform: translateY(-52px);
+    }
+
+    50%,
+    70% {
+        transform: translateY(-104px);
+    }
+
+    75%,
+    95% {
+        transform: translateY(-156px);
+    }
+
+    100% {
+        transform: translateY(0);
     }
 }

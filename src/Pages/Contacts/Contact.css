@@ -173,3 +173,37 @@
   }
 }
 
+@media (max-width: 480px) {
+  .outer-container {
+    padding: 24px 12px;
+    gap: 24px;
+  }
+
+  .contact-heading {
+    font-size: 1.7rem;
+    text-align: center;
+  }
+
+  .child-box {
+    height: auto;
+    min-height: 200px;
+    padding: 20px 16px;
+  }
+
+  .social-icon {
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .social-icon-heading p:first-child {
+    font-size: 1.15rem;
+  }
+
+  .social-icon-heading p,
+  .social-icon-heading a {
+    font-size: 1rem;
+    word-break: break-word;
+  }
+}
+

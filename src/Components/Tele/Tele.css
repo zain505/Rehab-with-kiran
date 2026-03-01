@@ -94,3 +94,28 @@
         text-align: center;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .parallax-effec {
+        min-height: 760px;
+        background-attachment: scroll;
+        margin-bottom: 100px;
+    }
+
+    .right-for-me {
+        width: calc(100% - 32px);
+        left: 16px;
+        top: 40px;
+        padding: 16px;
+    }
+
+    .heading p {
+        font-size: 24px;
+    }
+
+    .justification p {
+        font-size: 16px;
+        line-height: 1.7;
+        text-align: left;
+    }
+}

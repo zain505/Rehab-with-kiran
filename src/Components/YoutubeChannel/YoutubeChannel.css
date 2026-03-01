@@ -59,3 +59,33 @@
         align-items: center;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .yt-section-outer {
+        height: auto;
+        min-height: 0;
+        margin-bottom: 100px;
+        flex-direction: column;
+        padding: 24px 16px;
+        gap: 24px;
+    }
+
+    .yt-section-outer .content-text,
+    .yt-section-outer .content-media {
+        width: 100%;
+        height: auto;
+    }
+
+    .yt-section-outer .content-text .text-section {
+        width: 100%;
+        height: auto;
+    }
+
+    .yt-section-outer .content-text .text-section p {
+        font-size: 32px;
+    }
+
+    .yt-section-outer .content-text .text-section p span {
+        font-size: 18px;
+    }
+}

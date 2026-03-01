@@ -59,7 +59,7 @@ function Contact() {
         
         <div className='map-container'>
           <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3407.2877805115586!2d74.21121017506243!3d31.35103695548955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3918554b93b27181%3A0xd2958ad1a84bcbba!2sPlot%20507%2C%20Block%20D%20Awt%20Housing%20Scheme%20Phase%202%20AWT%20Phase%202%2C%20Lahore%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1737884627449!5m2!1sen!2s" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4681.185086737966!2d74.21055619363634!3d31.356469014049722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3918554c8bc8b561%3A0x3ceb3cce728d2a39!2sAwt%20Housing%20Scheme%20Phase%202%20AWT%20Phase%202%2C%20Lahore%2C%20Pakistan!5e0!3m2!1sen!2sus!4v1772380116240!5m2!1sen!2sus"
             allowFullScreen="" 
             loading="lazy" 
             referrerPolicy="no-referrer-when-downgrade">

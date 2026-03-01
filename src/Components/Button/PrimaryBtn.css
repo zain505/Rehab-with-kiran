@@ -93,3 +93,11 @@
         margin: 0;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .appointment-btn,
+    .appointment-btn-hover,
+    .appointment-btn:hover .appointment-btn-hover {
+        width: min(100%, 220px);
+    }
+}

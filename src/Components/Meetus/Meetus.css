@@ -111,3 +111,30 @@
     }
     
 }
+
+@media screen and (max-width: 768px) {
+    .meet-us-section {
+        margin-bottom: 100px;
+    }
+
+    .meet-us-content {
+        width: 90%;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .text-content,
+    .image-area,
+    .image-area-mob {
+        width: 100%;
+    }
+
+    .meet-dr-heading {
+        font-size: 28px;
+    }
+
+    .meet-dr-detail {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+}

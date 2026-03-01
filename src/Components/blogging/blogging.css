@@ -125,3 +125,45 @@
         }
     }
 }
+
+@media screen and (max-width: 1024px) {
+    .bloggin-wrapper {
+        height: auto;
+        margin-bottom: 100px;
+        padding: 0 16px;
+    }
+
+    .bloggin-wrapper .blogs {
+        width: 100%;
+        height: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .bloggin-wrapper .blogs .small-card,
+    .bloggin-wrapper .blogs .big-card {
+        width: min(100%, 520px);
+        height: 320px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .bloggin-wrapper .blogging-header p {
+        font-size: 22px;
+    }
+
+    .bloggin-wrapper .blogs .small-card,
+    .bloggin-wrapper .blogs .big-card {
+        height: 280px;
+    }
+
+    .bloggin-wrapper .blogs .lower-sec p {
+        font-size: 15px;
+    }
+
+    .bloggin-wrapper .blogs .lower-sec .date-and-read-more {
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+}
