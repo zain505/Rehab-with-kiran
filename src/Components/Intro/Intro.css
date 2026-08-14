@@ -84,12 +84,13 @@
 }
 
 .change-text {
+    --change-text-row-height: 68px;
     /* background-color: rgb(106, 103, 103); */
     width: 350px;
-    height: 60px;
+    height: var(--change-text-row-height);
     margin-left: 10px;
     overflow: hidden;
-    line-height: 60px;
+    transform: translateY(0.13em);
 }
 
 .change-text-track {
@@ -104,8 +105,12 @@
     font-weight: 700;
     /* color: #0015fe; */
     color: #fcffae;
-    height: 60px;
-    line-height: 60px;
+    height: var(--change-text-row-height);
+    line-height: 1.1;
+    display: flex;
+    align-items: center;
+    padding-bottom: 0.08em;
+    box-sizing: border-box;
     white-space: nowrap;
 }
 
@@ -117,17 +122,17 @@
 
     25%,
     45% {
-        transform: translateY(-60px);
+        transform: translateY(calc(-1 * var(--change-text-row-height)));
     }
 
     50%,
     70% {
-        transform: translateY(-120px);
+        transform: translateY(calc(-2 * var(--change-text-row-height)));
     }
 
     75%,
     95% {
-        transform: translateY(-180px);
+        transform: translateY(calc(-3 * var(--change-text-row-height)));
     }
 
     100% {
@@ -240,8 +245,7 @@
 
     .change-text,
     .change-text-track p {
-        height: 52px;
-        line-height: 52px;
+        height: var(--change-text-row-height);
     }
 
     .change-text-track {
@@ -316,6 +320,7 @@
         width: 100%;
         max-width: 280px;
         margin-left: 0;
+        transform: none;
     }
 
     .social-media-area {
@@ -352,17 +357,17 @@
 
     25%,
     45% {
-        transform: translateY(-52px);
+        transform: translateY(calc(-1 * var(--change-text-row-height)));
     }
 
     50%,
     70% {
-        transform: translateY(-104px);
+        transform: translateY(calc(-2 * var(--change-text-row-height)));
     }
 
     75%,
     95% {
-        transform: translateY(-156px);
+        transform: translateY(calc(-3 * var(--change-text-row-height)));
     }
 
     100% {

@@ -1,23 +1,40 @@
 import React from 'react';
 import "./Sign.css"
-import { Container, Col, Row, Input, InputGroup, Button } from 'reactstrap';
+import { Input, InputGroup, Button } from 'reactstrap';
 
 function SignUp() {
 
     return (
-        <>
-            <div className='news-letter-wrapper'>
-                <div className='content-section'>
-                    <p>SignUp for news letter, upcoming medical camp & blogs</p>
-                    <InputGroup>
-                        <Input placeholder='email@gmail.com' />
-                        <Button style={{backgroundColor:"#4DB8A6"}}>
+        <section className="newsletter-section" aria-labelledby="newsletter-heading">
+            <div className="newsletter-orb newsletter-orb--left" aria-hidden="true" />
+            <div className="newsletter-orb newsletter-orb--right" aria-hidden="true" />
+
+            <div className="newsletter-card">
+                <div className="newsletter-copy">
+                    <p className="newsletter-eyebrow">Stay connected</p>
+                    <h2 id="newsletter-heading">Care, guidance, and community&mdash;delivered.</h2>
+                    <p className="newsletter-description">
+                        Sign up for our newsletter, upcoming medical camps, and blogs.
+                    </p>
+                </div>
+
+                <div className="newsletter-signup">
+                    <InputGroup className="newsletter-input-group">
+                        <Input
+                            className="newsletter-input"
+                            type="email"
+                            aria-label="Email address"
+                            placeholder="email@example.com"
+                        />
+                        <Button className="newsletter-button" type="button">
                             Subscribe
+                            <span aria-hidden="true">&#8594;</span>
                         </Button>
                     </InputGroup>
+                    <p className="newsletter-note">Thoughtful updates only. No noise, no spam.</p>
                 </div>
             </div>
-        </>
+        </section>
     )
 }
 

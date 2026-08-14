@@ -1,8 +1,12 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+jest.mock('axios', () => ({
+  get: jest.fn(() => Promise.resolve({ status: 200, data: [] })),
+  post: jest.fn(() => Promise.resolve({ status: 200, data: {} })),
+}));
+
+test('renders the physiotherapy home page', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  expect(screen.getAllByText(/every pain relieved/i).length).toBeGreaterThan(0);
 });

@@ -1,9 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import "./Navbar.css";
-import Logo1 from "../../media/logo1.png"
-import Logo2 from "../../media/logo2.png"
 import Logo3 from "../../media/logo3.png"
-import Arrow from "../../media/arrow.png"
 import PrimaryBtn from "../../Components/Button/PrimaryBtn"
 import { Link } from 'react-router-dom';
 
@@ -16,7 +13,7 @@ function Navbar() {
       <div className='menu-section'>
         <div className='menu-section-content'>
           <div className='logo'>
-            <img src={Logo3} />
+            <img src={Logo3} alt="Rehab with Kiran" />
           </div>
           <div className='menu-items'>
             <p className='menu-item'><Link className='menu-item' style={{textDecoration:'none'}} to="/">Home</Link></p>
@@ -25,9 +22,9 @@ function Navbar() {
             <p className='menu-item'><Link className='menu-item' style={{textDecoration:'none'}} to="/blogs">Blogs</Link></p>
             <p className='menu-item'><Link className='menu-item' style={{textDecoration:'none'}} to="/contact">Contact Me</Link></p>
           </div>
-          <div className='language'>
-            <span className="icon-world"></span>
-            <p className='lang-text'>En</p>
+          <div className='language' aria-label="Current language: English">
+            <span className="icon-world" aria-hidden="true"></span>
+            <span className='lang-text' lang="en">EN</span>
           </div>
         </div>
       </div>

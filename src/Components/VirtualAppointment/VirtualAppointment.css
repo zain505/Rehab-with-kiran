@@ -1,241 +1,166 @@
-@import url('https://fonts.googleapis.com/css2?family=Matemasie&family=Nerko+One&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 .appointment-wrapper {
-    width: 100%;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #f0f5f4, #e6f0ef);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 40px 20px;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 100px 20px;
+  background: var(--ivory, #f7f5ef);
 }
 
-.header {
-    width: 100%;
-    margin-bottom: 20px;
-    text-align: center;
+.appointment-wrapper .header {
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-.header p {
-    font-family: "Poppins", sans-serif;
-    font-size: 2.8rem;
-    color: #2C635A;
-    font-weight: 600;
-    margin: 0;
-    position: relative;
-    padding-bottom: 15px;
+.appointment-wrapper .header p {
+  position: relative;
+  margin: 0;
+  padding-bottom: 15px;
+  color: var(--pine, #153d38);
+  font-family: var(--font-display, Georgia, serif);
+  font-size: clamp(38px, 4.5vw, 58px);
+  font-weight: 600;
 }
 
-.header p::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 3px;
-    background: linear-gradient(to right, #2C635A, #31AAA2);
-    border-radius: 2px;
+.appointment-wrapper .header p::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 52px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--champagne, #c5a66a);
+  transform: translateX(-50%);
 }
 
-.slogan {
-    width: 100%;
-    max-width: 800px;
-    text-align: center;
-    margin-bottom: 40px;
+.appointment-wrapper .slogan {
+  width: 100%;
+  max-width: 760px;
+  margin-bottom: 48px;
+  text-align: center;
 }
 
-.slogan p {
-    font-family: "Poppins", sans-serif;
-    font-size: 1.2rem;
-    color: #666;
-    line-height: 1.6;
-    margin: 0;
+.appointment-wrapper .slogan p {
+  margin: 0;
+  color: var(--slate, #65716e);
+  font: 400 18px/1.75 var(--font-body, Arial, sans-serif);
 }
 
-.web-form-view {
-    width: 90%;
-    max-width: 1000px;
-    padding: 40px;
-    border-radius: 30px;
-    background: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 10px 30px rgba(44, 99, 90, 0.1);
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
+.virtual-platform-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  width: min(100%, 1100px);
 }
 
-.input-wrapper-half {
-    width: calc(50% - 10px);
-    margin-bottom: 20px;
+.virtual-platform-card {
+  min-height: 330px;
+  padding: 38px 32px;
+  border: 1px solid var(--border, rgba(21, 61, 56, 0.13));
+  border-radius: var(--radius-md, 20px);
+  background: var(--white, #fff);
+  box-shadow: var(--shadow-soft, 0 18px 50px rgba(27, 55, 50, 0.09));
+  color: var(--charcoal, #24302e);
+  text-align: center;
+  text-decoration: none;
+  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
 }
 
-.input-wrapper-full {
-    width: 100%;
-    margin-bottom: 20px;
+.virtual-platform-card:hover,
+.virtual-platform-card:focus-visible {
+  border-color: rgba(197, 166, 106, 0.72);
+  box-shadow: var(--shadow-raised, 0 24px 65px rgba(20, 48, 44, 0.15));
+  color: var(--charcoal, #24302e);
+  text-decoration: none;
+  transform: translateY(-7px);
 }
 
-.input-wrapper-half p, .input-wrapper-full p {
-    margin: 0 0 8px 0;
-    font-weight: 500;
-    color: #2C635A;
-    font-size: 1rem;
+.virtual-platform-icon {
+  display: grid;
+  place-items: center;
+  width: 78px;
+  height: 78px;
+  margin: 0 auto 26px;
+  border-radius: 50%;
+  background: var(--sage, #dde7e2);
+  color: var(--pine, #153d38);
+  font-size: 38px;
 }
 
-.required-star {
-    color: #ff4444;
-    margin-left: 3px;
+.virtual-platform-card--whatsapp .virtual-platform-icon { color: #128c4a; }
+.virtual-platform-card--zoom .virtual-platform-icon { color: #2d8cff; }
+.virtual-platform-card--google-meet .virtual-platform-icon { color: #00897b; }
+
+.virtual-platform-card h3 {
+  margin: 0 0 14px;
+  color: var(--pine, #153d38);
+  font: 600 28px/1.2 var(--font-display, Georgia, serif);
 }
 
-/* Input styling */
-.web-form-view input, 
-.web-form-view select, 
-.web-form-view textarea {
-    border: 1px solid rgba(44, 99, 90, 0.2);
-    border-radius: 10px;
-    padding: 12px;
-    font-size: 1rem;
-    transition: all 0.3s ease;
+.virtual-platform-card > p {
+  min-height: 54px;
+  margin: 0 0 26px;
+  color: var(--slate, #65716e);
+  font: 400 16px/1.7 var(--font-body, Arial, sans-serif);
 }
 
-.web-form-view input:focus, 
-.web-form-view select:focus, 
-.web-form-view textarea:focus {
-    border-color: #31AAA2;
-    box-shadow: 0 0 0 2px rgba(49, 170, 162, 0.1);
-    outline: none;
+.virtual-platform-link {
+  color: var(--pine, #153d38);
+  font: 700 14px/1 var(--font-body, Arial, sans-serif);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
-/* Date picker styling */
-.react-datepicker-wrapper {
-    width: 100%;
+.virtual-platform-link span {
+  display: inline-block;
+  margin-left: 5px;
+  color: var(--champagne, #c5a66a);
+  transition: transform 220ms ease;
 }
 
-.react-datepicker__input-container input {
-    width: 100%;
-    padding: 12px;
-    border-radius: 10px;
-    border: 1px solid rgba(44, 99, 90, 0.2);
+.virtual-platform-card:hover .virtual-platform-link span,
+.virtual-platform-card:focus-visible .virtual-platform-link span {
+  transform: translate(3px, -3px);
 }
 
-/* Submit button wrapper */
-.virtual-submittion-btn-wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+@media (max-width: 900px) {
+  .virtual-platform-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
-/* Remove number input spinners */
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+@media (max-width: 640px) {
+  .appointment-wrapper {
+    min-height: auto;
+    padding: 72px 14px;
+  }
+
+  .appointment-wrapper .slogan {
+    margin-bottom: 34px;
+  }
+
+  .virtual-platform-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .virtual-platform-card {
+    min-height: 0;
+    padding: 32px 24px;
+  }
+
+  .virtual-platform-card > p {
+    min-height: 0;
+  }
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-    .web-form-view {
-        width: 95%;
-        padding: 20px;
-    }
-
-    .input-wrapper-half {
-        width: 100%;
-    }
-
-    .header p {
-        font-size: 2rem;
-    }
-
-    .slogan p {
-        font-size: 1rem;
-    }
-}
-
-/* Animation for form elements */
-.web-form-view {
-    animation: fadeIn 0.8s ease-out;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Country code select styling */
-.web-form-view select {
-    appearance: auto; /* Show default dropdown arrow */
-    background: white;
-    cursor: pointer;
-    padding-right: 30px; /* Space for arrow */
-}
-
-/* Phone number input group */
-.input-wrapper-half .form-group {
-    display: flex;
-    gap: 10px;
-}
-
-/* Country code select container */
-.input-wrapper-half .form-group select {
-    width: 140px !important; /* Fixed width for country code */
-    flex-shrink: 0;
-    font-size: 0.9rem;
-}
-
-/* Phone number input */
-.input-wrapper-half .form-group input {
-    flex: 1;
-}
-
-/* Dropdown options styling */
-.web-form-view select option {
-    padding: 10px;
-    font-size: 0.9rem;
-}
-
-/* Style for focused select */
-.web-form-view select:focus {
-    border-color: #31AAA2;
-    box-shadow: 0 0 0 2px rgba(49, 170, 162, 0.1);
-}
-
-/* Make sure the FormGroup maintains proper spacing */
-.form-group {
-    margin-bottom: 0;
-    width: 100%;
-}
-
-@media (max-width: 600px) {
-    .appointment-wrapper {
-        padding: 24px 12px;
-    }
-
-    .header p {
-        font-size: 1.8rem;
-    }
-
-    .web-form-view {
-        width: 100%;
-        padding: 16px;
-        border-radius: 20px;
-    }
-
-    .input-wrapper-half .form-group {
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    .input-wrapper-half .form-group select {
-        width: 100% !important;
-    }
+@media (prefers-reduced-motion: reduce) {
+  .virtual-platform-card,
+  .virtual-platform-link span {
+    transition: none;
+  }
 }

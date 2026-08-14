@@ -57,27 +57,41 @@
 }
 
 .language {
-    width: auto;
-    height: auto;
+    flex: 0 0 auto;
     display: flex;
     align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-width: 72px;
+    height: 40px;
+    padding: 0 14px;
+    border: 1px solid rgba(197, 166, 106, 0.45);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.04);
 }
 
 .language .lang-text {
     margin: 0;
     color: white;
-    font-size: 20px;
-    margin-top: 30px;
+    font-size: 14px;
     font-family: "Poppins", sans-serif;
-    font-weight: 400;
+    font-weight: 600;
     font-style: normal;
-    margin-left: 5px;
+    line-height: 1;
+    letter-spacing: 0.08em;
 }
 
 .language span {
     color: white;
-    font-size: 20px;
-    margin-top: 35px;
+    margin: 0;
+}
+
+.language .icon-world {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    line-height: 1;
 }
 .mobile-view {
     display: none;
@@ -223,7 +237,17 @@
     }
 
     .language span {
-        font-size: 16px;
         margin-top: 0;
+    }
+
+    .language {
+        min-width: 66px;
+        height: 36px;
+        padding: 0 12px;
+        gap: 7px;
+    }
+
+    .language .icon-world {
+        font-size: 15px;
     }
 }

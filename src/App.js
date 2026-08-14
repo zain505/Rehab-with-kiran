@@ -1,12 +1,9 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 
 import {
   createHashRouter,
-  Route,
-  Router,
   RouterProvider,
-  Routes,
 } from "react-router-dom";
 
 import Home from "./Pages/Home/Home";
@@ -20,6 +17,7 @@ import Story from './Pages/Story/Story';
 import Blog from './Pages/Blogs/Blog';
 import Contact from './Pages/Contacts/Contact';
 import AdminDashboard from './Components/adminController/AdminDashboard';
+import RevealOnScroll from './Components/RevealOnScroll/RevealOnScroll';
 
 
 function App() {
@@ -27,6 +25,12 @@ function App() {
   const SECRETADMINURL = "secret@url!!drkiranfatimaadmincontroller"
 
   const [openSideMenuBar, setOpenSideMenuBar] = useState(false);
+
+  useEffect(() => () => { document.body.style.overflow = ""; }, []);
+  const closeMobileMenu = () => {
+    document.body.style.overflow = "";
+    setOpenSideMenuBar(false);
+  };
 
   const router = createHashRouter([
     {
@@ -63,26 +67,24 @@ function App() {
   }
   return (
     <div className="App">
-      <div className='mobile-view-navbar'>
+      <RevealOnScroll />
+      <button className='mobile-view-navbar' aria-label="Open navigation menu" aria-expanded={openSideMenuBar} onClick={() => {
+        document.body.style.overflow = "hidden";
+        setOpenSideMenuBar(true);
+      }}>
         <div className='menu-bar-icon'>
           {/* <img src={Arrow} alt={Arrow} /> */}
-          <div className='right-arrow-wrapper' onClick={() => {
-            window.scrollTo(0, 0)
-            document.body.style.overflow = "hidden";
-            setOpenSideMenuBar(true)
-          }}>
+          <div className='right-arrow-wrapper'>
             <span className="icon-right-arrow1"></span>
           </div>
         </div>
-      </div>
+      </button>
+      {openSideMenuBar && <button className="mobile-menu-backdrop" aria-label="Close navigation menu" onClick={closeMobileMenu} />}
       <div className={openSideMenuBar ? 'open-side-menu' : 'close-side-menu'}>
-        <div className='close-icon' onClick={() => {
-          document.body.style.overflow = "";
-          setOpenSideMenuBar(false)
-        }}>
+        <button className='close-icon' aria-label="Close navigation menu" onClick={closeMobileMenu}>
           <span className="icon-left-arrow"></span>
           
-        </div>
+        </button>
         <div className='logo'>
           <div className='logo-area'>
             <img src={Logo3} alt={Logo3} />
@@ -104,47 +106,47 @@ function App() {
         </div>
         <hr style={{marginBottom:"45px"}} />
         <div className='menu-items-section'>
-          <div className='menu-item-wrapper'> 
+          <a href="#/" className='menu-item-wrapper' onClick={closeMobileMenu}>
             <div className='menu-item-mob'><p className='item'>Home</p></div>
             <div className='arrow-icon'>
               <span className="icon-right-arrow1"></span>
             </div>
-          </div>
-          <div className='menu-item-wrapper'>
+          </a>
+          <a href="#/appointment" className='menu-item-wrapper' onClick={closeMobileMenu}>
             <div className='menu-item-mob'><p className='item'>Get Appointment</p></div>
             <div className='arrow-icon'>
               <span className="icon-right-arrow1"></span>
             </div>
-          </div>
-          <div className='menu-item-wrapper'>
+          </a>
+          <a href="#/story" className='menu-item-wrapper' onClick={closeMobileMenu}>
             <div className='menu-item-mob'><p className='item'>My Story</p></div>
             <div className='arrow-icon'>
               <span className="icon-right-arrow1"></span>
             </div>
-          </div>
-          <div className='menu-item-wrapper'>
+          </a>
+          <a href="#/blogs" className='menu-item-wrapper' onClick={closeMobileMenu}>
             <div className='menu-item-mob'><p className='item'>Blogs</p></div>
             <div className='arrow-icon'>
               <span className="icon-right-arrow1"></span>
             </div>
-          </div>
-          <div className='menu-item-wrapper'>
+          </a>
+          <a href="#/contact" className='menu-item-wrapper' onClick={closeMobileMenu}>
             <div className='menu-item-mob'><p className='item'>Contact Me</p></div>
             <div className='arrow-icon'>
               <span className="icon-right-arrow1"></span>
             </div>
-          </div>
+          </a>
         </div>
         <div className='mob-menu-footer'>
           <div className='contact-wrapper' onClick={sendEmail}>
             <div>
-              <span class="icon-style icon-mail-recipient"></span>
+              <span className="icon-style icon-mail-recipient"></span>
             </div>
             <p className='email-text'>kiran.fatimakf530@gmail.com</p>
           </div>
           <div className='contact-wrapper'>
             <div>
-              <span class="icon-style icon-whatsapp"></span>
+              <span className="icon-style icon-whatsapp"></span>
             </div>
             <p onClick={sendWhatsAppMessage}  className='email-text'>+923248877456</p>
           </div>

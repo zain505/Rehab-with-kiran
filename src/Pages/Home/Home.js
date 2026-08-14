@@ -4,7 +4,6 @@ import Meetus from "../../Components/Meetus/Meetus";
 import RightForMe from "../../Components/RightForMe/RightForMe";
 import Tele from "../../Components/Tele/Tele";
 import VirtualAppointment from "../../Components/VirtualAppointment/VirtualAppointment";
-import AwardsSec from "../../Components/AwardsSec/AwardsSec";
 import YoutubeChannel from "../../Components/YoutubeChannel/YoutubeChannel";
 import Blogging from "../../Components/blogging/blogging";
 import SignUp from "../../Components/SignUp/SignUp";

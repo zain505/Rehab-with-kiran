@@ -1,268 +1,68 @@
-import React, { useEffect, useState } from 'react';
-import "./VirtualAppointment.css"
-import PrimBtn from "../Button/PrimaryBtn"
-import { FormGroup, Input, Label } from 'reactstrap';
-// import { DatePicker } from 'reactstrap-date-picker'
-import DatePicker from "react-datepicker";
-import axios from 'axios';
+import React from "react";
+import { FaWhatsapp } from "react-icons/fa";
+import { SiGooglemeet, SiZoom } from "react-icons/si";
+import ScrollToTop from "../ScrollToTop/ScrollToTop";
+import "./VirtualAppointment.css";
 
-import "react-datepicker/dist/react-datepicker.css";
-import { type } from '@testing-library/user-event/dist/type';
-import ScrollToTop from '../ScrollToTop/ScrollToTop';
+const whatsappMessage = encodeURIComponent("This is Dr. Kiran. How can I help you?");
+
+const platforms = [
+  {
+    name: "WhatsApp",
+    description: "Chat with us to arrange your virtual appointment.",
+    href: `https://api.whatsapp.com/send?phone=923261997724&text=${whatsappMessage}`,
+    icon: FaWhatsapp,
+    className: "whatsapp",
+  },
+  {
+    name: "Zoom",
+    description: "Connect with us through a secure Zoom video session.",
+    href: "https://zoom.us/",
+    icon: SiZoom,
+    className: "zoom",
+  },
+  {
+    name: "Google Meet",
+    description: "Join your online consultation using Google Meet.",
+    href: "https://meet.google.com/",
+    icon: SiGooglemeet,
+    className: "google-meet",
+  },
+];
 
 function VirtalAppointment() {
-    const [startDate, setStartDate] = useState(new Date());
-    const [name, setName] = useState("")
-    const [email, setEmail] = useState("")
-    const [countriesDialingCodes, setCountriesDialingCode] = useState([]);
-    const [address,setAddress] = useState("");
-    const [countryDialingCode, setCountryDialingCode] = useState(null);
-    const [UserPhone, setUserPhone] = useState("");
-    const [channel,setChannel] = useState("")
-    const [appointmentType, setAppointmentType] = useState("")
-    const [message,setMessage] = useState("")
-    const [findUs,setFindUs] = useState("")
-
-    useEffect(() => {
-        const fetchCountries = async ()=>{
-            try {
-                const response = await fetch("https://restcountries.com/v3.1/all");
-                const countryList = await response.json()
-                    reArrangeCountryDialingCode(countryList); 
-            } catch (error) {
-                console.error("Error fetching country codes:",error);
-            }
-        }
-        fetchCountries();
-    }, [])
-
-    const getVirtualResponse = async ()=>{
-        const payload = {
-            name,
-            email,
-            whatsApp: `${countryDialingCode}${UserPhone}`,
-            address,
-            appointmentDate: startDate,
-            channelSelection: channel,
-            appointmentType,
-            message,
-            findUs,
-        };
-        try {
-            const response = await axios.post("http://192.168.100.70:5000/user/createVirtualAppointment",payload)
-            
-                if(response.status === 200)
-                {
-                    alert("Appointment booked successfully!");
-                }  
-        } catch (error) {
-            console.error("Error booking appointment",error)
-        }
-    }
-
-    const handleName=(event)=>{
-        setName(event.target.value)
-    }
-
-    const handleAppointmentType=(event)=>{
-        setAppointmentType(event.target.value)
-    }
-
-    const handleEmail=(event)=>{
-        setEmail(event.target.value)
-    }
-
-    const handleAddress=(event)=>{
-        setAddress(event.target.value)
-    }
-
-    const handleChannel=(event)=>{
-        setChannel(event.target.value)
-    }
-    const handleMessage=(event)=>{
-        setMessage(event.target.value)
-    }
-    const handleFindUs=(event)=>{
-        setFindUs(event.target.value)
-    }
-
-    const reArrangeCountryDialingCode = (countryList) => {
-        let newDialingCode = []
-        countryList.map(country => {
-            if (country?.idd?.suffixes?.length > 1) {
-                country?.idd?.suffixes.map(suffix => {
-                    newDialingCode.push({ Dialingcode: `${country?.idd?.root}${suffix}`, countryName: country.name.common })
-                })
-            } else if (country?.idd?.suffixes?.length == 1) {
-                newDialingCode.push({ Dialingcode: `${country?.idd?.root}${country?.idd?.suffixes[0]}`, countryName: country.name.common })
-            }
-
-        })
-        setCountriesDialingCode(newDialingCode.sort((a, b) => a.countryName.localeCompare(b.countryName)))
-    }
-
-    const handleCountryCode = (e) => {
-        const { value } = e.target;
-        setCountryDialingCode(value)
-    }
-
-    const handlePhoneNumber = (event) => {
-        const { value } = event.target; 
-        if (!isNaN(value) && value.length <= 10) {
-            setUserPhone(value)
-        }
-    }
-    return (
-        <>
-            <div className='appointment-wrapper'>
-                <ScrollToTop/>
-                <div className='header'>
-                    <p>Virtual Appointments Available!</p>
-                </div>
-                <div className='slogan'>
-                    <p>Can’t make it to hospital? You can have a virtual appointment from the comfort and safety of your own home. We can also mail your supplements directly to you.</p>
-                </div>
-                <div className='web-form-view'>
-                    <div className='input-wrapper-full'>
-                        <p>Full Name: <span className='required-star'>*</span></p>
-                        <Input type="text" value={name} onChange={handleName}/>
-                    </div>
-                    <div className='input-wrapper-half'>
-                        <p>Email: <span className='required-star'>*</span></p>
-                        <Input type="text" value={email} onChange={handleEmail}/>
-                    </div>
-                    <div className='input-wrapper-half'>
-                        <p>WhatsApp: <span className='required-star'>*</span> (ex. 3123456789)</p>
-                        <FormGroup style={{ display: 'flex' }}>
-                            <Input
-                                id="exampleSelect"
-                                name="select"
-                                type="select"
-                                value={countryDialingCode}
-                                suppressHydrationWarning
-                                onChange={(e) => handleCountryCode(e)}
-                                style={{ width: 100 }}
-                            >
-                                {
-                                    countriesDialingCodes?.map((info,index) => {
-                                        return (
-                                            <option key={index} value={info.Dialingcode}>
-                                                {info.countryName}{"-"}({info.Dialingcode})
-                                            </option>
-                                        )
-                                    })
-                                }
-                            </Input>
-                            <Input type="number" value={UserPhone} onChange={(e) => handlePhoneNumber(e)} />
-                        </FormGroup>
-
-                    </div>
-                    <div className='input-wrapper-half'>
-                        <p>Address:  </p>
-                        <Input type="text" value={address} onChange={handleAddress} />
-                    </div>
-                    <div className='input-wrapper-half'>
-                        <p>When you want:  <span className='required-star'>*</span></p>
-                        <DatePicker
-
-                            dateFormat={'dd/MM/yyyy'}
-                            minDate={new Date()}
-                            todayButton={true}
-                            showMonthDropdown
-                            calendarStartDay={0}
-                            className=''
-                            showIcon
-                            selected={startDate}
-                            onChange={(startDate) => setStartDate(startDate)}
-                        />
-                    </div>
-                    <div className='input-wrapper-half'>
-                        <FormGroup>
-                            <p>Which channel we can speak with you: <span className='required-star'>*</span></p>
-                            <Input
-                                id="exampleSelect"
-                                name="select"
-                                type="select"
-                                onChange={handleChannel}
-                                value={channel}
-                            >
-                                <option>
-                                    Select One
-                                </option>
-                                <option>
-                                    Google Meets
-                                </option>
-                                <option>
-                                    Zoom
-                                </option>
-                                <option>
-                                    Skype
-                                </option>
-                            </Input>
-                        </FormGroup>
-                    </div>
-                    <div className='input-wrapper-half'>
-                    <FormGroup>
-                            <p>Appointment type: <span className='required-star'>*</span></p>
-                            <Input
-                                id="exampleSelect"
-                                name="select"
-                                type="select"
-                                onChange={handleAppointmentType}
-                                value={appointmentType}
-                            >
-                                <option>
-                                    Select One
-                                </option>
-                                <option>
-                                    Therapy
-                                </option>
-                                <option>
-                                    Consultation
-                                </option>
-                                <option>
-                                    Counselling
-                                </option>
-                            </Input>
-                        </FormGroup>
-                    </div>
-                    <div className='input-wrapper-full'>
-                        <p>Message: </p>
-                        <Input type="textarea" value={message} onChange={handleMessage} />
-                    </div>
-                    <div className='input-wrapper-full'>
-                        <FormGroup>
-                            <p>How Did you find us: </p>
-                            <Input
-                                id="exampleSelect"
-                                name="select"
-                                type="select"
-                                value={findUs}
-                                onChange={handleFindUs}
-                            >
-                                <option>
-                                    Select One
-                                </option>
-                                <option>
-                                    Google
-                                </option>
-                                <option>
-                                    Social Media
-                                </option>
-                                <option>
-                                    Friend & Family Referral
-                                </option>
-                            </Input>
-                        </FormGroup>
-                    </div>
-                    <div className='virtual-submittion-btn-wrapper'>
-                        <PrimBtn title={"Send"} titleOnHover={"Send"} onClick={getVirtualResponse} />
-                    </div>
-                </div>
-            </div>
-
-        </>
-    )
+  return (
+    <section className="appointment-wrapper" aria-labelledby="virtual-appointment-heading">
+      <ScrollToTop />
+      <div className="header">
+        <p id="virtual-appointment-heading">Virtual Appointments Available!</p>
+      </div>
+      <div className="slogan">
+        <p>We&apos;re virtually available on every platform.</p>
+      </div>
+      <div className="virtual-platform-grid">
+        {platforms.map(({ name, description, href, icon: Icon, className }) => (
+          <a
+            key={name}
+            className={`virtual-platform-card virtual-platform-card--${className}`}
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Open ${name} in a new tab`}
+          >
+            <span className="virtual-platform-icon" aria-hidden="true">
+              <Icon />
+            </span>
+            <h3>{name}</h3>
+            <p>{description}</p>
+            <span className="virtual-platform-link" aria-hidden="true">
+              Connect now <span>↗</span>
+            </span>
+          </a>
+        ))}
+      </div>
+    </section>
+  );
 }
 
 export default VirtalAppointment;

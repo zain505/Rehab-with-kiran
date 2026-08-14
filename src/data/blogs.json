@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "slug": "carpal-tunnel-stretches",
+    "category": "Wrist Care",
+    "title": "Worried About Carpal Tunnel? Simple Stretches to Ease Wrist and Hand Discomfort",
+    "excerpt": "Gentle movement and better wrist habits may help ease tingling, stiffness, and discomfort during everyday tasks.",
+    "description": "Carpal tunnel syndrome is a common condition that can cause pain, tingling, numbness, weakness, or discomfort in the hand and wrist. It develops when the median nerve becomes compressed as it passes through the narrow carpal tunnel in the wrist. Symptoms may gradually interfere with everyday activities such as typing, writing, driving, holding a phone, or gripping objects.\n\nGentle stretching exercises can be incorporated into a daily routine for people experiencing wrist and hand discomfort. They may help improve wrist mobility and allow the tendons and median nerve to move more freely through the carpal tunnel. These exercises may be used alongside wrist splinting, activity modification, or other treatment recommended by a healthcare professional.\n\nIf you spend several hours working on a computer, using a smartphone, performing repetitive hand movements, or doing manual tasks, take short movement breaks. Keeping the wrist in one position for long periods—particularly when it is bent far forward or backward—may aggravate symptoms. An ergonomic workstation and less unnecessary repetitive strain can also help.\n\nKeep every movement slow, gentle, and controlled. Never force a stretch into significant pain. Stop and seek professional advice if an exercise increases numbness, tingling, burning, or pain. Exercises are not a guaranteed cure, and similar symptoms can have different causes. If symptoms worsen, disturb sleep, weaken your grip, or affect daily activities, arrange a professional assessment.",
+    "image": "blog1.png",
+    "imageAlt": "A person performing a gentle wrist stretch",
+    "publishedDate": "2026-08-14",
+    "readTime": "4 min read"
+  },
+  {
+    "id": 2,
+    "slug": "child-developmental-milestones",
+    "category": "Child Development",
+    "title": "Is Your Child Missing Developmental Milestones? Signs Parents Should Watch For",
+    "excerpt": "Learn which movement, communication, and social milestones deserve a closer look—and when to ask for support.",
+    "description": "Every child develops at their own pace, and a small variation from another child's timeline is often normal. Milestones are useful guides rather than strict deadlines. They help families and healthcare professionals observe progress in movement, communication, play, learning, and social interaction.\n\nPay attention when a child has persistent difficulty with age-expected skills such as holding their head steady, sitting, crawling, standing, walking, using gestures, responding to their name, or beginning to communicate. Also seek advice if movement seems unusually stiff or floppy, one side of the body is used much more than the other, or everyday play and interaction remain difficult.\n\nOne missed milestone does not necessarily mean that a child has a developmental condition. However, several delays, a widening gap over time, or the loss of a skill the child previously had should be discussed promptly with a pediatrician. Early assessment can identify a child's strengths and needs and connect the family with suitable support.\n\nDepending on the concern, a pediatrician may recommend a developmental specialist, physiotherapist, occupational therapist, speech and language therapist, or hearing assessment. Parents know their children well; if something does not feel right, it is reasonable to ask for an evaluation rather than simply waiting.",
+    "image": "blog2.png",
+    "imageAlt": "A parent supporting a young child's development",
+    "publishedDate": "2026-08-11",
+    "readTime": "4 min read"
+  },
+  {
+    "id": 3,
+    "slug": "early-signs-of-autism",
+    "category": "Autism Awareness",
+    "title": "Early Signs of Autism in Children: What Parents Should Know",
+    "excerpt": "Recognizing patterns in communication, interaction, behavior, and sensory responses can support earlier assessment.",
+    "description": "Autism spectrum disorder is a developmental condition that can affect communication, social interaction, behavior, and sensory processing. Autism looks different in every child, and signs may be subtle or become more noticeable as social and communication demands increase.\n\nEarly signs can include limited eye contact, a reduced response to their name, fewer gestures such as pointing or waving, delayed spoken communication, repetitive movements, intense interests, or difficulty joining shared play. Some children react strongly—or barely react—to sounds, textures, lights, tastes, or movement. Others may prefer familiar routines and find unexpected changes difficult.\n\nThese signs alone do not confirm autism. A child may show one or more of them for many reasons, including hearing differences, language delay, anxiety, or an individual developmental style. Diagnosis requires a comprehensive assessment of development and behavior by appropriately qualified professionals.\n\nIf you notice persistent differences or your child loses language, social, or play skills they previously used, speak with a pediatrician or developmental specialist. Early evaluation does not label a child; it helps families understand their needs and gain access to communication, sensory, educational, and movement support when appropriate.",
+    "image": "blog3.png",
+    "imageAlt": "A child engaged in a focused play activity",
+    "publishedDate": "2026-08-08",
+    "readTime": "4 min read"
+  },
+  {
+    "id": 4,
+    "slug": "adhd-vs-autism",
+    "category": "Neurodevelopment",
+    "title": "ADHD vs Autism: Understanding the Differences and Similarities",
+    "excerpt": "ADHD and autism can overlap, but their core patterns and the support each child needs may differ.",
+    "description": "ADHD and autism are neurodevelopmental conditions that can sometimes look similar. Both may involve challenges with attention, behavior, social interaction, sensory processing, transitions, or emotional regulation. A child can also have both conditions, which is why conclusions based on one behavior are rarely reliable.\n\nADHD commonly involves persistent patterns of inattention, impulsivity, and/or hyperactivity across more than one setting. A child may struggle to organize tasks, wait their turn, remain seated, remember instructions, or regulate focus. Autism is more strongly associated with differences in social communication and interaction, alongside restricted or repetitive patterns of behavior, interests, routines, or sensory responses.\n\nThe same outward behavior can have a different cause. A child with ADHD may miss a social cue because their attention has shifted, while an autistic child may interpret the cue differently. Repetitive movement might provide sensory regulation in autism, while frequent motion in ADHD may be connected with restlessness or impulse control.\n\nNo checklist or single symptom can distinguish the conditions accurately. A comprehensive developmental assessment considers the child's history, behavior in different environments, communication, learning, sensory profile, strengths, and daily challenges. The goal is not merely a label, but a clearer plan for practical and individualized support.",
+    "image": "blog4.png",
+    "imageAlt": "Illustration representing ADHD and autism",
+    "publishedDate": "2026-08-05",
+    "readTime": "4 min read"
+  },
+  {
+    "id": 5,
+    "slug": "physiotherapy-for-children-with-autism",
+    "category": "Pediatric Physiotherapy",
+    "title": "How Physiotherapy Helps Children With Autism",
+    "excerpt": "Play-based physiotherapy can build movement confidence, coordination, strength, and everyday independence.",
+    "description": "Some autistic children experience challenges with balance, posture, coordination, motor planning, strength, or participation in physical activities. These differences may affect playground play, stairs, running, jumping, ball skills, dressing, school routines, or confidence when trying unfamiliar movements.\n\nPediatric physiotherapy begins with an individual assessment of the child's strengths, movement patterns, environment, interests, and functional goals. Therapy may focus on gross motor skills, balance, core and limb strength, coordination, body awareness, endurance, or planning a sequence of movements. Activities are adapted to the child's communication and sensory preferences.\n\nSessions often use structured, enjoyable play—such as obstacle courses, games, climbing, jumping, or ball activities—to make practice meaningful. A physiotherapist can also help parents and teachers adjust activities and environments so the child can participate more comfortably at home, school, and in the community.\n\nPhysiotherapy does not aim to change who a child is or remove autism. Its purpose is to reduce barriers, support safe and efficient movement, and help the child take part in activities that matter to them. Goals should be practical, respectful, collaborative, and reviewed as the child's needs develop.",
+    "image": "blog5.png",
+    "imageAlt": "A child taking part in a pediatric physiotherapy activity",
+    "publishedDate": "2026-08-02",
+    "readTime": "4 min read"
+  },
+  {
+    "id": 6,
+    "slug": "tummy-time-motor-development",
+    "category": "Baby Development",
+    "title": "Tummy Time and Your Baby: Why It Matters for Motor Development",
+    "excerpt": "Short, supervised tummy-time sessions help babies build the control needed for rolling, sitting, and crawling.",
+    "description": "Tummy time means placing an awake baby on their stomach while a responsible adult watches closely. This position helps strengthen the neck, shoulders, arms, and trunk and gives babies opportunities to practise lifting and turning their head, bearing weight through their arms, and shifting their body. These foundations contribute to later skills such as rolling, sitting, crawling, and reaching.\n\nStart with short, frequent sessions when your baby is calm and alert. You can place them on your chest, across your lap, or on a firm floor mat. Bring your face or a high-contrast toy into view, get down at their level, and offer encouragement. A small rolled towel under the chest may make floor time more comfortable while keeping the arms forward.\n\nSome babies initially dislike tummy time. Build it gradually rather than forcing a long session. Stop if the baby becomes very tired or distressed, and try again at another calm point in the day. Tummy time should always be supervised and is only for awake periods; babies should be placed on their back for sleep unless a healthcare professional advises otherwise.\n\nSpeak with your pediatrician or pediatric physiotherapist if your baby consistently turns to one side, has difficulty lifting their head, seems unusually stiff or floppy, or is not progressing with early movement skills.",
+    "image": "blog6.png",
+    "imageAlt": "A baby enjoying supervised tummy time",
+    "publishedDate": "2026-07-30",
+    "readTime": "4 min read"
+  },
+  {
+    "id": 7,
+    "slug": "developmental-red-flags",
+    "category": "Parent Guide",
+    "title": "10 Developmental Red Flags Parents Should Not Ignore",
+    "excerpt": "These ten signs do not confirm a disorder, but they are good reasons to request a professional developmental assessment.",
+    "description": "Development varies from child to child, but certain patterns deserve timely professional attention. A red flag does not automatically mean that a child has a disorder. It means that an assessment may help explain what is happening and whether support is needed.\n\nWatch for these ten signs: poor head control beyond the expected stage; significant delay in sitting, standing, or walking; loss of previously learned skills; persistent use of one side of the body more than the other; limited gestures, sounds, or spoken communication; reduced response to sounds or to their name; repetitive movements that significantly limit play or participation; ongoing feeding or swallowing difficulties; frequent unexplained falls; and marked problems with balance or coordination.\n\nContext matters. Illness, premature birth, hearing or vision differences, opportunity to practise, and many other factors can influence development. Avoid comparing children only with siblings or friends; observe the child's own progress and whether difficulties affect everyday life.\n\nContact a pediatrician if you notice a red flag, several skills are delayed, or you remain concerned despite reassurance. Seek prompt medical advice for any loss of skills. A developmental assessment may involve physiotherapy, occupational therapy, speech and language, hearing, vision, or other specialist input. Early support can give children and families useful strategies at the stage when they can have the greatest practical benefit.",
+    "image": "blog7.png",
+    "imageAlt": "A parent observing a child's developmental progress",
+    "publishedDate": "2026-07-27",
+    "readTime": "5 min read"
+  }
+]
