@@ -93,10 +93,6 @@
     font-size: 17px;
     line-height: 1;
 }
-.mobile-view {
-    display: none;
-}
-
 @media screen and (max-width: 500px) {
     .menu-section {
         display: none
@@ -117,51 +113,6 @@
         display: none;
     }
 
-    .mobile-view {
-        width: 100%;
-        max-width: 360px;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 12px;
-        padding: 14px 16px 0;
-        margin: 0 auto;
-    }
-
-    .text-slogan-mob {
-        width: 100%;
-        height: auto;
-        text-align: center;
-        padding: 8px 14px;
-        border: 1px solid rgba(255, 255, 255, 0.18);
-        border-radius: 999px;
-        background: rgba(10, 25, 22, 0.55);
-        backdrop-filter: blur(8px);
-    }
-
-    .text-slogan-mob p {
-        margin: 0;
-        font-size: 11px;
-        font-weight: 600;
-        letter-spacing: 0.04em;
-        text-transform: none;
-        font-family: "Poppins", sans-serif;
-        color: #eef7f1;
-        line-height: 1.4;
-    }
-
-    .navbar-appointBtn{
-        width: 100%;
-        height: auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .navbar-appointBtn p {
-        margin: 0;
-    }
 }
 
 @media screen and (max-width: 768px) {
@@ -169,49 +120,9 @@
         display: none;
     }
 
-    .mobile-view {
-        width: 100%;
-        max-width: 420px;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 12px;
-        padding: 14px 16px 0;
-        margin: 0 auto;
-    }
-
-    .text-slogan-mob {
-        padding: 8px 14px;
-        border: 1px solid rgba(255, 255, 255, 0.18);
-        border-radius: 999px;
-        background: rgba(10, 25, 22, 0.55);
-        backdrop-filter: blur(8px);
-    }
-
-    .text-slogan-mob p {
-        margin: 0;
-        font-size: 12px;
-        line-height: 1.45;
-        font-weight: 600;
-        letter-spacing: 0.04em;
-        text-align: center;
-        text-transform: none;
-        color: #eef7f1;
-    }
-
-    .navbar-appointBtn {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-
-    .navbar-appointBtn p {
-        margin: 0;
-    }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media screen and (min-width: 769px) and (max-width: 1180px) {
     .menu-section-content {
         width: 94%;
         align-items: center;

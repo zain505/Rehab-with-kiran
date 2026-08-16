@@ -1,6 +1,6 @@
 import React from 'react';
 import "./Meetus.css";
-import Photo from "../../media/4.jpeg"
+import Photo from "../../media/4.jpg"
 import PrimBtn from "../Button/PrimaryBtn"
 import { Link } from 'react-router-dom';
 import ScrollToTop from '../ScrollToTop/ScrollToTop';
@@ -18,7 +18,7 @@ function Meetus() {
                             <img src={Photo} width={"100%"} height={"100%"} alt="Dr. Kiran Fatima, physiotherapist" />
                         </div>
                         <p className='meet-dr-detail'>
-                            Dr. Kiran Fatima is a dedicated physical therapist based in Lahore, Pakistan. A proud graduate of Riphah International University, she earned both her undergraduate and master's degrees in Orthopedic Manual Therapy from the same esteemed institution. Dr. Fatima combines hands-on expertise with a commitment to patient care. In addition to her in-person practice, she offers online consultations through various platforms including WhatsApp and Instagram. Recognized for her excellence, Dr. Fatima is also a gold medalist in her field.
+                            Dr. Kiran Fatima is a dedicated physiotherapist based in Lahore, Pakistan. A proud graduate of Riphah International University, she earned both her undergraduate and master's degrees in Orthopedic Manual Therapy from the same esteemed institution. Through online calls, Zoom, and Google Meet, she provides personalized physiotherapy consultations and telerehabilitation to clients across Pakistan. Recognized for her excellence, Dr. Fatima is also a gold medalist in her field.
 
                             Her approach integrates comprehensive treatment strategies, emphasizing personalized care and holistic well-being.
                         </p>

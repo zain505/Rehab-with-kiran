@@ -131,11 +131,9 @@ a { color: inherit; }
   background: linear-gradient(90deg, rgba(8,31,28,.88) 0%, rgba(8,31,28,.58) 52%, rgba(8,31,28,.32) 100%) !important;
   backdrop-filter: none !important;
 }
-.ticker { padding: 8px 16px; background: var(--champagne) !important; }
-.ticker .text-color-white { color: var(--pine-deep); font: 700 12px/1.4 var(--font-body); letter-spacing: .08em; text-transform: uppercase; }
 .intro-middle-section { flex: 1; align-items: center; }
 .middle-section-content { width: min(90%, 1280px) !important; }
-.slogan-area > p,
+.slogan-area > h1,
 .changeable-slogan > p {
   color: white !important; font-family: var(--font-display) !important;
   font-size: clamp(48px, 6vw, 84px) !important; line-height: 1.03; font-weight: 500 !important;
@@ -151,6 +149,11 @@ a { color: inherit; }
   border: 1px solid rgba(255,255,255,.25); border-radius: 50%; transition: 220ms ease;
 }
 .social-icon span { font-size: 18px !important; }
+.social-icon svg {
+  display: block;
+  color: white !important;
+  font-size: 18px;
+}
 .social-icon:hover { border-color: var(--champagne); background: rgba(197,166,106,.15); transform: translateY(-2px); }
 .get-appointment-btn-content { width: min(90%, 1280px) !important; }
 .go-down-btn-section { bottom: 26px !important; transform: translateX(-50%); }
@@ -251,7 +254,7 @@ a { color: inherit; }
 .child-box:hover .icons { background: var(--pine) !important; }
 .social-icon-heading p:first-child { color: var(--pine) !important; font-size: 13px !important; letter-spacing: .12em; }
 .social-icon-heading p,.social-icon-heading a { color: var(--slate) !important; }
-.social-icon svg { color: var(--pine) !important; }
+.social-icon svg { color: white !important; }
 .map-container { border-radius: var(--radius-lg) !important; border: 8px solid white; box-shadow: var(--shadow-soft) !important; }
 
 /* Story and blogs share the Bootstrap container */
@@ -294,7 +297,7 @@ a { color: inherit; }
   .intro-outer { min-height: 680px !important; height: 100svh !important; }
   .intro-outer .overlay { background: linear-gradient(180deg, rgba(8,31,28,.32), rgba(8,31,28,.9)) !important; }
   .slogan-area { max-width: 100% !important; padding-bottom: 72px !important; }
-  .slogan-area > p, .changeable-slogan > p { font-size: clamp(34px, 10vw, 48px) !important; }
+  .slogan-area > h1, .changeable-slogan > p { font-size: clamp(34px, 10vw, 48px) !important; }
   .change-text { --change-text-row-height: 58px; width: 100% !important; height: var(--change-text-row-height) !important; margin: 0 !important; }
   .change-text-track p { height: var(--change-text-row-height) !important; font-size: clamp(32px, 9vw, 44px) !important; }
   .go-down-btn-section { display: none; }

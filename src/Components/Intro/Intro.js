@@ -4,6 +4,7 @@ import PlayBack from "../../media/videoplayback.mp4";
 import Navbar from "../Navbar/Navbar";
 import PrimBtn from "../Button/PrimaryBtn"
 import { Link } from 'react-router-dom';
+import { FaLinkedin } from 'react-icons/fa';
 
 function Intro() {
     const socialMediaUrl = (url) => {
@@ -13,15 +14,12 @@ function Intro() {
         <>
             <div className='intro-outer'>
                 <div className='overlay'>
-                    <div className='ticker'>
-                        <p className='text-color-white'>Happening Now! 50% Discount, Click On Get Appointment</p>
-                    </div>
                     <Navbar />
                     <div className='intro-middle-section'>
                         <div className='middle-section-content'>
                             <div className='slogan-area'>
-                                <p>One Hub,</p>
-                                <p>Every Pain Relieved.</p>
+                                <h1>Online physiotherapy<br />across Pakistan</h1>
+                                <p className="intro-service-summary">Personalized telerehabilitation with Dr. Kiran Fatima through Zoom or Google Meet.</p>
                                 <div className='changeable-slogan'>
                                     <p>Rehab with</p>
                                     <div className='change-text'>
@@ -36,9 +34,9 @@ function Intro() {
                             </div>
                             <div className='social-media-area'>
                                 <div onClick={()=>socialMediaUrl("https://www.instagram.com/dr_kiran_fatima?igsh=MW8yd3YxdW1pZG5uOQ==")} className='social-icon'><span className="icon-instagram"></span></div>
-                                <div onClick={()=>socialMediaUrl("")} className='social-icon'><span className="icon-twitter"></span></div>
                                 <div onClick={()=>socialMediaUrl("https://www.youtube.com/@kiranPT237")} className='social-icon'><span className="icon-youtube"></span></div>
-                                <div onClick={()=>socialMediaUrl("https://www.facebook.com/share/1EaArVeGVy/")} className='social-icon'><span className="icon-facebook-logo-in-circular-shape"></span></div>
+                                <div onClick={()=>socialMediaUrl("https://www.facebook.com/share/1Hjyke8qp5/")} className='social-icon'><span className="icon-facebook-logo-in-circular-shape"></span></div>
+                                <div onClick={()=>socialMediaUrl("https://www.linkedin.com/in/kiran-fatima-kf30")} className='social-icon' aria-label='LinkedIn'><FaLinkedin /></div>
                             </div>
                         </div>
                     </div>

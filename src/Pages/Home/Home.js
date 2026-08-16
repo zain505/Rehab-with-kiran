@@ -8,6 +8,7 @@ import YoutubeChannel from "../../Components/YoutubeChannel/YoutubeChannel";
 import Blogging from "../../Components/blogging/blogging";
 import SignUp from "../../Components/SignUp/SignUp";
 import Footer from "../../Components/Footer/Footer";
+import ConsultationFee from "../../Components/ConsultationFee/ConsultationFee";
 
 
 function Home() {
@@ -18,6 +19,7 @@ function Home() {
             <Tele />
             <RightForMe />
             <VirtualAppointment />
+            <ConsultationFee compact />
             {/* <AwardsSec/> */}
             <YoutubeChannel />
             <Blogging />

@@ -1,0 +1,159 @@
+.consultation-fee {
+  width: 100%;
+  padding: 100px 20px;
+  background: linear-gradient(145deg, #eef3ef 0%, var(--ivory, #f7f5ef) 54%, #f3ecdd 100%);
+}
+
+.consultation-fee__content {
+  width: min(100%, 1050px);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.consultation-fee__eyebrow {
+  margin: 0 0 10px;
+  color: var(--champagne, #a9823f);
+  font: 700 13px/1.4 var(--font-body, Arial, sans-serif);
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.consultation-fee h1 {
+  position: relative;
+  margin: 0 0 22px;
+  padding-bottom: 17px;
+  color: var(--pine, #153d38);
+  font: 600 clamp(38px, 4.5vw, 58px)/1.15 var(--font-display, Georgia, serif);
+}
+
+.consultation-fee h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 52px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--champagne, #c5a66a);
+  transform: translateX(-50%);
+}
+
+.consultation-fee__intro {
+  max-width: 650px;
+  margin: 0 auto 46px;
+  color: var(--slate, #65716e);
+  font: 400 17px/1.75 var(--font-body, Arial, sans-serif);
+}
+
+.consultation-fee__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.consultation-fee__card {
+  padding: 38px 28px 36px;
+  border: 1px solid var(--border, rgba(21, 61, 56, .13));
+  border-radius: var(--radius-md, 20px);
+  background: rgba(255, 255, 255, .94);
+  box-shadow: var(--shadow-soft, 0 18px 50px rgba(27, 55, 50, .09));
+}
+
+.consultation-fee__icon {
+  display: grid;
+  place-items: center;
+  width: 68px;
+  height: 68px;
+  margin: 0 auto 21px;
+  border-radius: 50%;
+  background: var(--sage, #dde7e2);
+  color: var(--pine, #153d38);
+  font-size: 29px;
+}
+
+.consultation-fee__card h2 {
+  margin: 0 0 8px;
+  color: var(--pine, #153d38);
+  font: 600 27px/1.25 var(--font-display, Georgia, serif);
+}
+
+.consultation-fee__price {
+  margin: 17px 0 0;
+  color: var(--pine, #153d38);
+  font: 700 clamp(30px, 4vw, 42px)/1.15 var(--font-display, Georgia, serif);
+}
+
+.consultation-fee__duration {
+  margin: 9px 0 0;
+  color: var(--slate, #65716e);
+  font: 400 15px/1.5 var(--font-body, Arial, sans-serif);
+}
+
+.consultation-fee__note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  max-width: 760px;
+  margin: 32px auto 28px;
+  padding: 16px 20px;
+  border: 1px solid rgba(197, 166, 106, .45);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, .66);
+}
+
+.consultation-fee__note span {
+  flex: 0 0 26px;
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--champagne, #c5a66a);
+  color: #173d36;
+  font: 700 15px Georgia, serif;
+}
+
+.consultation-fee__note p {
+  margin: 0;
+  color: var(--charcoal, #24302e);
+  font: 500 15px/1.6 var(--font-body, Arial, sans-serif);
+  text-align: left;
+}
+
+.consultation-fee__button {
+  display: inline-flex;
+  min-height: 52px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 28px;
+  border-radius: 999px;
+  background: var(--pine, #153d38);
+  color: white;
+  font: 700 14px/1 var(--font-body, Arial, sans-serif);
+  letter-spacing: .04em;
+  text-decoration: none;
+  transition: transform 220ms ease, background 220ms ease;
+}
+
+.consultation-fee__button:hover,
+.consultation-fee__button:focus-visible {
+  background: #20574d;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.consultation-fee-page .consultation-fee { min-height: 70vh; }
+
+@media (max-width: 640px) {
+  .consultation-fee { padding: 72px 14px; }
+  .consultation-fee__intro { margin-bottom: 32px; }
+  .consultation-fee__grid { grid-template-columns: 1fr; gap: 18px; }
+  .consultation-fee__card { padding: 30px 20px; }
+  .consultation-fee__note { align-items: flex-start; margin-top: 24px; padding: 15px; }
+  .consultation-fee__button { width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .consultation-fee__button { transition: none; }
+}

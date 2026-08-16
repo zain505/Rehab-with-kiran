@@ -3,8 +3,8 @@ import Navbar from '../../Components/Navbar/Navbar'
 import './Contact.css'
 import Footer from '../../Components/Footer/Footer'
 import ScrollToTop from '../../Components/ScrollToTop/ScrollToTop'
-import { MdArrowOutward, MdEmail, MdPhone, MdLocationOn } from 'react-icons/md'
-import { ImFacebook, ImInstagram } from 'react-icons/im'
+import { MdArrowOutward, MdEmail, MdPhone, MdVideoCall } from 'react-icons/md'
+import { ImFacebook, ImInstagram, ImLinkedin } from 'react-icons/im'
 
 function Contact() {
   return (
@@ -34,11 +34,14 @@ function Contact() {
             </a>
             <div className='contact-socials' aria-label='Social media'>
               <span>Follow along</span>
-              <a href='https://www.facebook.com/share/1EaArVeGVy/' target='_blank' rel='noreferrer' aria-label='Facebook'>
+              <a href='https://www.facebook.com/share/1Hjyke8qp5/' target='_blank' rel='noreferrer' aria-label='Facebook'>
                 <ImFacebook />
               </a>
               <a href='https://www.instagram.com/dr_kiran_fatima?igsh=MW8yd3YxdW1pZG5uOQ==' target='_blank' rel='noreferrer' aria-label='Instagram'>
                 <ImInstagram />
+              </a>
+              <a href='https://www.linkedin.com/in/kiran-fatima-kf30' target='_blank' rel='noreferrer' aria-label='LinkedIn'>
+                <ImLinkedin />
               </a>
             </div>
           </article>
@@ -64,11 +67,11 @@ function Contact() {
               <MdArrowOutward className='contact-detail-arrow' aria-hidden='true' />
             </a>
 
-            <a className='contact-detail' href='https://maps.google.com/?q=AWT+Phase+2+Lahore+Pakistan' target='_blank' rel='noreferrer'>
-              <span className='contact-detail-icon'><MdLocationOn aria-hidden='true' /></span>
+            <a className='contact-detail' href='#/appointment'>
+              <span className='contact-detail-icon'><MdVideoCall aria-hidden='true' /></span>
               <span className='contact-detail-copy'>
-                <span className='contact-detail-label'>Visit us</span>
-                <strong>AWT, Phase 2</strong>
+                <span className='contact-detail-label'>Meet online</span>
+                <strong>Zoom or Google Meet</strong>
                 <small>Lahore, Pakistan</small>
               </span>
               <MdArrowOutward className='contact-detail-arrow' aria-hidden='true' />
@@ -76,23 +79,19 @@ function Contact() {
           </div>
         </section>
 
-        <section className='contact-location' aria-label='Clinic location'>
+        <section className='contact-location' aria-label='Online physiotherapy service'>
           <div className='contact-location-copy'>
-            <span className='contact-eyebrow'>Find us in Lahore</span>
-            <h2>A calm space for your recovery.</h2>
-            <p>Located in AWT Phase 2, with appointments arranged in advance.</p>
-            <a href='https://maps.google.com/?q=AWT+Phase+2+Lahore+Pakistan' target='_blank' rel='noreferrer'>
-              Open in Google Maps <MdArrowOutward aria-hidden='true' />
+            <span className='contact-eyebrow'>Physiotherapy from home</span>
+            <h2>Expert guidance, wherever you are.</h2>
+            <p>Connect with Dr. Kiran Fatima through Zoom or Google Meet for personalized online physiotherapy and telerehabilitation.</p>
+            <a href='#/appointment'>
+              Request an online appointment <MdArrowOutward aria-hidden='true' />
             </a>
           </div>
-          <div className='map-container'>
-            <iframe
-              title='Rehab with Kiran location in AWT Phase 2, Lahore'
-              src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4681.185086737966!2d74.21055619363634!3d31.356469014049722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3918554c8bc8b561%3A0x3ceb3cce728d2a39!2sAwt%20Housing%20Scheme%20Phase%202%20AWT%20Phase%202%2C%20Lahore%2C%20Pakistan!5e0!3m2!1sen!2sus!4v1772380116240!5m2!1sen!2sus'
-              allowFullScreen
-              loading='lazy'
-              referrerPolicy='no-referrer-when-downgrade'
-            />
+          <div className='map-container contact-location-copy'>
+            <MdVideoCall aria-hidden='true' size='72' />
+            <h2>Lahore, Pakistan</h2>
+            <p>Appointments are delivered virtually; there is no walk-in clinic location.</p>
           </div>
         </section>
       </main>

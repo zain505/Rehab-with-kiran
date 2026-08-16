@@ -4,7 +4,7 @@ import "./Footer.css";
 import { Container, Col, Row } from 'reactstrap';
 import Logo from "../../media/logo3.png";
 import { MdEmail, MdPhone, MdOpenInNew } from 'react-icons/md';
-import { FaWhatsapp, FaInstagram, FaFacebook } from "react-icons/fa";
+import { FaWhatsapp, FaInstagram, FaFacebook, FaLinkedin } from "react-icons/fa";
 
 function Footer() {
     let staticMessage = "This is Dr. Kiran How can I help you?";
@@ -51,8 +51,11 @@ function Footer() {
                                         <p onClick={() => socialMediaUrl("https://www.instagram.com/dr_kiran_fatima")}>
                                             <FaInstagram/> Insta / rehab-with-kiran
                                         </p>
-                                        <p onClick={() => socialMediaUrl("https://www.facebook.com/share/1EaArVeGVy/")}>
+                                        <p onClick={() => socialMediaUrl("https://www.facebook.com/share/1Hjyke8qp5/")}>
                                             <FaFacebook/> Facebook / rehab-with-kiran
+                                        </p>
+                                        <p onClick={() => socialMediaUrl("https://www.linkedin.com/in/kiran-fatima-kf30")}>
+                                            <FaLinkedin/> LinkedIn / Kiran Fatima
                                         </p>
                                         <p onClick={() => socialMediaUrl(`https://api.whatsapp.com/send?phone=+923261997724&text=${staticMessage}`)}>
                                             <FaWhatsapp /> +92 326 1997 724 <MdOpenInNew />
@@ -63,12 +66,11 @@ function Footer() {
                             <Col xs="12" sm="4">
                                 <div className='display-around-wrapper'>
                                     <div className='wrapper-header'>
-                                        <p>Addresses</p>
+                                        <p>Online Care</p>
                                     </div>
                                     <div className='wrapper-description'>
-                                        <p onClick={() => socialMediaUrl("https://www.google.com/maps?q=31.3508530, 74.2138310")}>
-                                            AWT Phase 2, Lahore <MdOpenInNew />
-                                        </p>
+                                        <p>Lahore, Pakistan</p>
+                                        <p>Appointments via Zoom or Google Meet</p>
                                     </div>
                                 </div>
                             </Col>
